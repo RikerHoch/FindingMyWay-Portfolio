@@ -88,7 +88,7 @@ This portfolio documents part of that ongoing journey — connecting my learning
 
 ## 🔗 Portfolio Links
 
-- 🌐 **Live Portfolio:** [Add your published website URL here]
+- 🌐 **Live Portfolio:** [[Add your published website URL here]](https://findingmyway-portfolio.pages.dev)
 
 ---
 
