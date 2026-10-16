@@ -1,0 +1,1968 @@
+<html>
+  
+  <style>
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+      display: block;
+    }
+    body {
+      line-height: 1;
+      margin: 0;
+      font-family: var(--base-font-family);
+    }
+    ol,
+    ul {
+      list-style: none;
+    }
+    blockquote,
+    q {
+      quotes: none;
+    }
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+      content: '';
+      content: none;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+  
+    * {
+      -webkit-font-smoothing: antialiased;
+      box-sizing: border-box;
+    }
+    html,
+    body {
+      margin: 0px;
+      height: 100%;
+    }
+    button:focus-visible {
+      outline: 2px solid #4a90e2 !important;
+      outline: -webkit-focus-ring-color auto 5px !important;
+    }
+  
+    :root {
+      --base-font-family: 'Lato', Helvetica, Arial, sans-serif;
+      --x-3-1primarylicorice: rgba(45, 59, 69, 1);
+      --x-3-1primarywhite: rgba(255, 255, 255, 1);
+      --title-section-font-weight: 700;
+      --title-section-font-size: 28px;
+      --title-section-letter-spacing: 0px;
+      --title-section-line-height: 35px;
+      --title-section-font-style: normal;
+      --content-font-weight: 400;
+      --content-font-size: 16px;
+      --content-letter-spacing: 0px;
+      --content-line-height: 24px;
+      --content-font-style: normal;
+      --title-card-regular-font-weight: 700;
+      --title-card-regular-font-size: 20px;
+      --title-card-regular-letter-spacing: 0px;
+      --title-card-regular-line-height: 25px;
+      --title-card-regular-font-style: normal;
+      --content-small-font-weight: 400;
+      --content-small-font-size: 14px;
+      --content-small-letter-spacing: 0px;
+      --content-small-line-height: 21px;
+      --content-small-font-style: normal;
+      --small-normal-font-weight: 400;
+      --small-normal-font-size: 14px;
+      --small-normal-letter-spacing: 0px;
+      --small-normal-line-height: 20px;
+      --small-normal-font-style: normal;
+      --title-module-font-weight: 700;
+      --title-module-font-size: 24px;
+      --title-module-letter-spacing: 0px;
+      --title-module-line-height: 30px;
+      --title-module-font-style: normal;
+      --title-card-mini-font-weight: 700;
+      --title-card-mini-font-size: 16px;
+      --title-card-mini-letter-spacing: 0px;
+      --title-card-mini-line-height: 20px;
+      --title-card-mini-font-style: normal;
+      --label-font-weight: 700;
+      --label-font-size: 16px;
+      --label-letter-spacing: 0px;
+      --label-line-height: 20px;
+      --label-font-style: normal;
+      --desktop-general-body-text-font-weight: 400;
+      --desktop-general-body-text-font-size: 16px;
+      --desktop-general-body-text-letter-spacing: 0px;
+      --desktop-general-body-text-line-height: 20px;
+      --desktop-general-body-text-font-style: normal;
+      --legend-font-weight: 400;
+      --legend-font-size: 12px;
+      --legend-letter-spacing: 0px;
+      --legend-line-height: 18px;
+      --legend-font-style: normal;
+      --medium-bold-font-weight: 700;
+      --medium-bold-font-size: 16px;
+      --medium-bold-letter-spacing: 0px;
+      --medium-bold-line-height: 24px;
+      --medium-bold-font-style: normal;
+      --content-link-font-weight: 400;
+      --content-link-font-size: 16px;
+      --content-link-letter-spacing: 0px;
+      --content-link-line-height: 24px;
+      --content-link-font-style: normal;
+      --UI-surface-page-primary: var(--contrasts-white-1010);
+      --UI-text-title: var(--contrasts-grey-125125);
+      --UI-text-body: var(--contrasts-grey-125125);
+      --UI-text-data-point: var(--contrasts-grey-5782);
+      --UI-text-timestamp: var(--contrasts-grey-5782);
+      --UI-text-link: var(--contrasts-blue-5782);
+      --UI-surface-card-secondary: var(--contrasts-grey-1111);
+      --UI-line-stroke: var(--contrasts-grey-1424);
+      --UI-line-stroke-duplicate: var(--contrasts-grey-1424-duplicate);
+      --contrasts-white-1010: var(--UI-primitives-white-10);
+      --contrasts-green-5782: var(--UI-primitives-green-57);
+      --contrasts-grey-5782: var(--UI-primitives-grey-57);
+      --contrasts-green-5782-duplicate: var(--UI-primitives-green-57);
+      --contrasts-grey-125125: var(--UI-primitives-grey-125);
+      --contrasts-blue-5782: var(--UI-primitives-blue-57);
+      --contrasts-grey-1111: var(--UI-primitives-grey-11);
+      --contrasts-white-1010-duplicate: var(--UI-primitives-white-10-duplicate);
+      --contrasts-grey-1424: var(--UI-primitives-grey-14);
+      --contrasts-grey-1424-duplicate: var(--UI-primitives-grey-14-duplicate);
+      --contrasts-green-4570: var(--UI-primitives-green-45);
+      --contrasts-grey-4570: var(--UI-primitives-grey-45);
+      --contrasts-green-4570-duplicate: var(--UI-primitives-green-45);
+      --UI-primitives-white-10: rgba(255, 255, 255, 1);
+      --UI-primitives-green-57: rgba(2, 118, 52, 1);
+      --UI-primitives-grey-57: rgba(88, 104, 116, 1);
+      --UI-primitives-grey-125: rgba(39, 53, 64, 1);
+      --UI-primitives-blue-57: rgba(14, 104, 179, 1);
+      --UI-primitives-grey-11: rgba(242, 244, 244, 1);
+      --UI-primitives-white-10-duplicate: rgba(255, 255, 255, 1);
+      --UI-primitives-green-82: rgba(1, 91, 40, 1);
+      --UI-primitives-grey-14: rgba(215, 218, 222, 1);
+      --UI-primitives-grey-82: rgba(63, 81, 94, 1);
+      --UI-primitives-grey-14-duplicate: rgba(215, 218, 222, 1);
+      --UI-primitives-green-45: rgba(60, 141, 95, 1);
+      --UI-primitives-grey-45: rgba(106, 120, 131, 1);
+      --UI-primitives-grey-24: rgba(158, 166, 173, 1);
+      --UI-primitives-blue-82: rgba(9, 80, 140, 1);
+      --UI-primitives-green-70: rgba(2, 103, 45, 1);
+      --UI-primitives-grey-24-duplicate: rgba(158, 166, 173, 1);
+      --UI-primitives-grey-70: rgba(74, 91, 104, 1);
+      --data-visualization-violet-45-primary: var(
+        --IDP-data-primitive-violet-primary-violet-45
+      );
+      --data-visualization-ocean-45-primary: var(
+        --IDP-data-primitive-ocean-primary-ocean-45
+      );
+      --orange-color-45-primary: var(
+        --IDP-data-primitive-orange-primary-orange-45
+      );
+      --IDP-data-primitive-violet-primary-violet-45: rgba(179, 54, 232, 1);
+      --IDP-data-primitive-ocean-primary-ocean-45: rgba(37, 115, 223, 1);
+      --IDP-data-primitive-orange-primary-orange-45: rgb(191, 88, 17);
+    }
+  
+    [data-contrasts-mode='4-5-1'] {
+      --contrasts-green-5782: var(--UI-primitives-green-57);
+      --contrasts-grey-5782: var(--UI-primitives-grey-57);
+      --contrasts-green-5782-duplicate: var(--UI-primitives-green-57);
+      --contrasts-blue-5782: var(--UI-primitives-blue-57);
+      --contrasts-grey-1424: var(--UI-primitives-grey-14);
+      --contrasts-grey-1424-duplicate: var(--UI-primitives-grey-14-duplicate);
+      --contrasts-green-4570: var(--UI-primitives-green-45);
+      --contrasts-grey-4570: var(--UI-primitives-grey-45);
+      --contrasts-green-4570-duplicate: var(--UI-primitives-green-45);
+    }
+  
+    [data-contrasts-mode='7-1'] {
+      --contrasts-green-5782: var(--UI-primitives-green-82);
+      --contrasts-grey-5782: var(--UI-primitives-grey-82);
+      --contrasts-green-5782-duplicate: var(--UI-primitives-green-82);
+      --contrasts-blue-5782: var(--UI-primitives-blue-82);
+      --contrasts-grey-1424: var(--UI-primitives-grey-24);
+      --contrasts-grey-1424-duplicate: var(--UI-primitives-grey-24-duplicate);
+      --contrasts-green-4570: var(--UI-primitives-green-70);
+      --contrasts-grey-4570: var(--UI-primitives-grey-70);
+      --contrasts-green-4570-duplicate: var(--UI-primitives-green-70);
+    }
+  
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 36px;
+      padding: 58px 48px;
+      position: relative;
+      background-color: var(--UI-surface-page-primary);
+      border-radius: 4px;
+      max-width: 1312px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+      box-sizing: border-box;
+    }
+  
+    .instructions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex: 0 0 auto;
+    }
+  
+    .instructions__content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      padding: 36px;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex: 0 0 auto;
+      background-color: var(--x-3-1primarywhite);
+      border-radius: 0px 0px 4px 4px;
+      border: 1px solid;
+      border-color: var(--UI-line-stroke-duplicate);
+    }
+  
+    .heading--section {
+      position: relative;
+      align-self: stretch;
+      margin-top: -1px;
+      font-weight: var(--title-section-font-weight);
+      color: var(--UI-text-title);
+      font-size: var(--title-section-font-size);
+      letter-spacing: var(--title-section-letter-spacing);
+      line-height: var(--title-section-line-height);
+      font-style: var(--title-section-font-style);
+    }
+  
+    .text--content {
+      align-self: stretch;
+      color: var(--x-3-1primarylicorice);
+      position: relative;
+      font-weight: var(--content-font-weight);
+      font-size: var(--content-font-size);
+      letter-spacing: var(--content-letter-spacing);
+      line-height: var(--content-line-height);
+      font-style: var(--content-font-style);
+    }
+  
+    .section {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex: 0 0 auto;
+    }
+  
+    .heading--title {
+      position: relative;
+      width: fit-content;
+      margin-top: -1px;
+      font-weight: var(--title-section-font-weight);
+      color: var(--UI-text-title);
+      font-size: var(--title-section-font-size);
+      letter-spacing: var(--title-section-letter-spacing);
+      line-height: var(--title-section-line-height);
+      white-space: nowrap;
+      font-style: var(--title-section-font-style);
+    }
+  
+    .skills-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex-wrap: wrap;
+      flex: 0 0 auto;
+    }
+  
+    .tags-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex-wrap: wrap;
+      flex: 0 0 auto;
+    }
+  
+    .skill-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 8px 4px 12px;
+      position: relative;
+      flex: 0 0 auto;
+      background-color: var(--UI-surface-card-secondary);
+      border-radius: 32px;
+      border: 1px solid;
+      border-color: var(--UI-line-stroke);
+    }
+  
+    .tag-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 8px 4px 12px;
+      position: relative;
+      flex: 0 0 auto;
+      background-color: var(--UI-surface-card-secondary);
+      border-radius: 32px;
+      border: 1px solid;
+      border-color: var(--UI-line-stroke);
+    }
+  
+    .skill-tag__text {
+      position: relative;
+      width: fit-content;
+      margin-top: -1px;
+      font-weight: 400;
+      color: var(--x-3-1primarylicorice);
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: 20px;
+      white-space: nowrap;
+    }
+  
+    .tag-tag__text {
+      position: relative;
+      width: fit-content;
+      margin-top: -1px;
+      font-weight: 400;
+      color: var(--x-3-1primarylicorice);
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: 20px;
+      white-space: nowrap;
+    }
+  
+    .heading--module {
+      position: relative;
+      width: 100%;
+      margin-right: 0;
+      box-sizing: border-box;
+      font-weight: var(--title-module-font-weight);
+      color: var(--UI-text-title);
+      font-size: var(--title-module-font-size);
+      letter-spacing: var(--title-module-letter-spacing);
+      line-height: var(--title-module-line-height);
+      font-style: var(--title-module-font-style);
+    }
+  
+    .content-tray {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      padding: 24px;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex: 0 0 auto;
+      background-color: #ffffff;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid;
+      border-color: var(--UI-line-stroke);
+      overflow-y: scroll;
+    }
+  
+    .content-tray::-webkit-scrollbar {
+      width: 0;
+      display: none;
+    }
+  
+    .card-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex: 0 0 auto;
+    }
+  
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex: 0 0 auto;
+    }
+  
+    .card-header__content {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      position: relative;
+      flex: 0 0 auto;
+    }
+  
+    .badge-text--violet {
+      position: relative;
+      width: fit-content;
+      margin-top: -1px;
+      font-weight: var(--title-card-mini-font-weight);
+      color: var(--data-visualization-violet-45-primary);
+      font-size: var(--title-card-mini-font-size);
+      letter-spacing: var(--title-card-mini-letter-spacing);
+      line-height: var(--title-card-mini-line-height);
+      white-space: nowrap;
+      font-style: var(--title-card-mini-font-style);
+    }
+  
+    .timestamp {
+      position: relative;
+      align-self: stretch;
+      font-weight: var(--content-small-font-weight);
+      color: var(--UI-text-timestamp);
+      font-size: var(--content-small-font-size);
+      letter-spacing: var(--content-small-letter-spacing);
+      line-height: var(--content-small-line-height);
+      font-style: var(--content-small-font-style);
+    }
+  
+    .content-panel--violet {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      padding: 24px;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex: 0 0 auto;
+      background-color: #fdf9fe;
+      border-radius: 4px;
+    }
+  
+    .content-panel--blue {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      padding: 24px;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex: 0 0 auto;
+      background-color: #f8fbfe;
+      border-radius: 4px;
+    }
+  
+    .content-panel--green {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      padding: 24px;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex: 0 0 auto;
+      background-color: #f7fbfa;
+      border-radius: 4px;
+    }
+  
+    .content-panel--orange {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      padding: 24px;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex: 0 0 auto;
+      background-color: #fdfaf8;
+      border-radius: 4px;
+    }
+  
+    .panel-title {
+      position: relative;
+      width: fit-content;
+      margin-top: -1px;
+      font-weight: var(--title-module-font-weight);
+      color: var(--UI-text-title);
+      font-size: var(--title-module-font-size);
+      letter-spacing: var(--title-module-letter-spacing);
+      line-height: var(--title-module-line-height);
+      white-space: nowrap;
+      font-style: var(--title-module-font-style);
+    }
+  
+    .panel-label {
+      position: relative;
+      width: fit-content;
+      margin-top: -1px;
+      font-weight: var(--label-font-weight);
+      color: var(--UI-text-title);
+      font-size: var(--label-font-size);
+      letter-spacing: var(--label-letter-spacing);
+      line-height: var(--label-line-height);
+      white-space: nowrap;
+      font-style: var(--label-font-style);
+    }
+  
+    .panel-label--dark {
+      position: relative;
+      width: fit-content;
+      margin-top: -1px;
+      font-weight: var(--label-font-weight);
+      color: var(--x-3-1primarylicorice);
+      font-size: var(--label-font-size);
+      letter-spacing: var(--label-letter-spacing);
+      line-height: var(--label-line-height);
+      white-space: nowrap;
+      font-style: var(--label-font-style);
+    }
+  
+    .text--panel {
+      position: relative;
+      isolation: isolate;
+      overflow: auto;
+      align-self: stretch;
+      font-weight: var(--content-font-weight);
+      color: var(--UI-text-body);
+      font-size: var(--content-font-size);
+      letter-spacing: var(--content-letter-spacing);
+      line-height: var(--content-line-height);
+      font-style: var(--content-font-style);
+    }
+  
+    .text--panel-highlight {
+      font-weight: var(--content-font-weight);
+      color: #273540;
+      font-size: var(--content-font-size);
+      letter-spacing: var(--content-letter-spacing);
+      line-height: var(--content-line-height);
+      font-style: var(--content-font-style);
+    }
+  
+    .badge-text--blue {
+      width: fit-content;
+      margin-top: -1px;
+      font-weight: var(--title-card-mini-font-weight);
+      color: var(--data-visualization-ocean-45-primary);
+      font-size: var(--title-card-mini-font-size);
+      line-height: var(--title-card-mini-line-height);
+      white-space: nowrap;
+      position: relative;
+      letter-spacing: var(--title-card-mini-letter-spacing);
+      font-style: var(--title-card-mini-font-style);
+    }
+  
+    .badge-text--orange {
+      width: fit-content;
+      margin-top: -1px;
+      font-weight: var(--title-card-mini-font-weight);
+      color: var(--orange-color-45-primary);
+      font-size: var(--title-card-mini-font-size);
+      line-height: var(--title-card-mini-line-height);
+      white-space: nowrap;
+      position: relative;
+      letter-spacing: var(--title-card-mini-letter-spacing);
+      font-style: var(--title-card-mini-font-style);
+    }
+  
+    .badge-text--green {
+      width: fit-content;
+      margin-top: -1px;
+      font-weight: var(--title-card-mini-font-weight);
+      color: var(--contrasts-green-4570);
+      font-size: var(--title-card-mini-font-size);
+      line-height: var(--title-card-mini-line-height);
+      white-space: nowrap;
+      position: relative;
+      letter-spacing: var(--title-card-mini-letter-spacing);
+      font-style: var(--title-card-mini-font-style);
+    }
+  
+    .card-title--flex {
+      flex: 1;
+      margin-top: -1px;
+      font-weight: var(--title-card-regular-font-weight);
+      color: var(--UI-text-title);
+      font-size: var(--title-card-regular-font-size);
+      line-height: var(--title-card-regular-line-height);
+      position: relative;
+      letter-spacing: var(--title-card-regular-letter-spacing);
+      font-style: var(--title-card-regular-font-style);
+    }
+  
+    .text--data {
+      align-self: stretch;
+      font-weight: var(--desktop-general-body-text-font-weight);
+      color: var(--UI-text-data-point);
+      font-size: var(--desktop-general-body-text-font-size);
+      line-height: var(--desktop-general-body-text-line-height);
+      position: relative;
+      letter-spacing: var(--desktop-general-body-text-letter-spacing);
+      font-style: var(--desktop-general-body-text-font-style);
+    }
+  
+    .file-list {
+      gap: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex: 0 0 auto;
+    }
+  
+    .file-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 8px;
+      padding: 12px;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex: 0 0 auto;
+      background-color: #ffffff;
+      border-radius: 4px;
+      border: 1px solid;
+      border-color: var(--UI-line-stroke);
+    }
+  
+    .file-item__content {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      position: relative;
+      flex: 1;
+      flex-grow: 1;
+    }
+  
+    .file-item__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      flex: 0 0 auto;
+    }
+  
+    .file-item__icon svg {
+      width: 100%;
+      height: 100%;
+    }
+  
+    .file-item__info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 4px;
+      position: relative;
+      flex: 1;
+      flex-grow: 1;
+    }
+  
+    .file-item__name {
+      position: relative;
+      align-self: stretch;
+      margin-top: -1px;
+      font-weight: var(--content-font-weight);
+      color: var(--UI-text-title);
+      font-size: var(--content-font-size);
+      letter-spacing: var(--content-letter-spacing);
+      line-height: var(--content-line-height);
+      font-style: var(--content-font-style);
+    }
+  
+    .file-item__type {
+      position: relative;
+      width: fit-content;
+      margin-top: -1px;
+      font-weight: var(--legend-font-weight);
+      color: var(--UI-text-data-point);
+      font-size: var(--legend-font-size);
+      letter-spacing: var(--legend-letter-spacing);
+      line-height: var(--legend-line-height);
+      white-space: nowrap;
+      font-style: var(--legend-font-style);
+    }
+  
+    .links-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex: 0 0 auto;
+    }
+  
+    .attachments-groups {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex: 0 0 auto;
+    }
+  
+    .submission-list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex: 0 0 auto;
+    }
+  
+    .submission-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 16px;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex: 0 0 auto;
+      background-color: #ffffff;
+      border-radius: 4px;
+      border: 1px solid;
+      border-color: var(--UI-line-stroke);
+    }
+  
+    .submission-item__name {
+      position: relative;
+      align-self: stretch;
+      font-weight: var(--title-card-regular-font-weight);
+      color: var(--UI-text-title);
+      font-size: var(--title-card-regular-font-size);
+      letter-spacing: var(--title-card-regular-letter-spacing);
+      line-height: var(--title-card-regular-line-height);
+      font-style: var(--title-card-regular-font-style);
+    }
+  
+    .link-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex: 0 0 auto;
+      border-radius: 4px;
+    }
+  
+    .link-item__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+    }
+  
+    .link-item__icon svg {
+      width: 100%;
+      height: 100%;
+    }
+  
+    .link-item__text {
+      width: fit-content;
+      margin-top: -1px;
+      color: var(--UI-text-link);
+      text-decoration: underline;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      line-clamp: 1;
+      -webkit-box-orient: vertical;
+      position: relative;
+      font-weight: var(--content-link-font-weight);
+      font-size: var(--content-link-font-size);
+      letter-spacing: var(--content-link-letter-spacing);
+      line-height: var(--content-link-line-height);
+      font-style: var(--content-link-font-style);
+    }
+  
+    @media (max-width: 1024px) {
+      .heading--module {
+        font-size: calc(var(--title-module-font-size) * 0.9);
+      }
+  
+      .text--panel {
+        font-size: calc(var(--content-font-size) * 0.95);
+      }
+      .panel-title {
+        font-size: calc(var(--title-module-font-size) * 0.9);
+      }
+      .panel-label {
+        font-size: calc(var(--label-font-size) * 0.95);
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .container {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+  
+      .heading--module {
+        font-size: calc(var(--title-module-font-size) * 0.8);
+      }
+  
+      .skills-container {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 6px;
+      }
+      .skill-tag {
+        margin-bottom: 6px;
+        flex-grow: 0;
+        flex-shrink: 0;
+      }
+  
+      .tags-container {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 6px;
+      }
+      .tag-tag {
+        margin-bottom: 6px;
+        flex-grow: 0;
+        flex-shrink: 0;
+      }
+  
+      .content-tray,
+      .content-panel--violet,
+      .content-panel--blue {
+        padding: 16px;
+      }
+  
+      .text--panel {
+        font-size: calc(var(--content-font-size) * 0.9);
+      }
+      .panel-title {
+        font-size: calc(var(--title-module-font-size) * 0.85);
+      }
+      .panel-label {
+        font-size: calc(var(--label-font-size) * 0.9);
+      }
+      .file-item__name {
+        font-size: calc(var(--content-font-size) * 0.9);
+        word-break: break-word;
+      }
+      .link-item__text {
+        font-size: calc(var(--content-link-font-size) * 0.9);
+        word-break: break-all;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .heading--module {
+        font-size: calc(var(--title-module-font-size) * 0.7);
+      }
+      .skills-container {
+        gap: 4px;
+        justify-content: center;
+      }
+      .tags-container {
+        gap: 4px;
+        justify-content: center;
+      }
+      .skill-tag {
+        margin-bottom: 4px;
+        font-size: 0.9em;
+      }
+      .tag-tag {
+        margin-bottom: 4px;
+        font-size: 0.9em;
+      }
+      .text--panel {
+        font-size: calc(var(--content-font-size) * 0.85);
+      }
+      .panel-title {
+        font-size: calc(var(--title-module-font-size) * 0.75);
+      }
+      .panel-label {
+        font-size: calc(var(--label-font-size) * 0.85);
+      }
+  
+      .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .card-header .card-header__content {
+        margin-bottom: 8px;
+      }
+  
+      .file-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .file-item .file-item__content {
+        width: 100%;
+      }
+  
+      .heading--title {
+        white-space: normal;
+        word-break: break-word;
+      }
+    }
+  
+    .portfolio-header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      position: relative;
+      align-self: stretch;
+      width: 100%;
+      flex: 0 0 auto;
+    }
+  
+    .portfolio-title {
+      position: relative;
+      align-self: stretch;
+      font-weight: var(--title-section-font-weight);
+      color: var(--UI-text-title);
+      font-size: 38px;
+      letter-spacing: var(--title-section-letter-spacing);
+      line-height: 40px;
+      font-style: var(--title-section-font-style);
+      margin: 0;
+    }
+  
+    .portfolio-author {
+      position: relative;
+      align-self: stretch;
+      font-weight: var(--content-font-weight);
+      color: var(--UI-text-data-point);
+      font-size: var(--content-font-size);
+      letter-spacing: var(--content-letter-spacing);
+      line-height: var(--content-line-height);
+      font-style: var(--content-font-style);
+    }
+  
+    @media (max-width: 1024px) {
+      .portfolio-title {
+        font-size: 38px;
+        line-height: 35px;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .portfolio-title {
+        font-size: 32px;
+        line-height: 30px;
+      }
+  
+      .portfolio-header {
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .portfolio-title {
+        font-size: 28px;
+        line-height: 26px;
+      }
+  
+      .portfolio-header {
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+    }
+  </style>  <body>
+    <main class="container">
+      <div class="portfolio-header">
+  <h1 class="portfolio-title">TS7501 Finding my Way - S1 2026 [Riker - Evidence]</h1>
+  <div class="portfolio-author">Riker Hoch</div>
+</div>
+<div class='instructions' role='region'>
+  <div class='instructions__content'>
+    <h2 class='heading--section'>Description</h2>
+    <p class='text--content'><p>This portfolio presents selected evidence of my development of transferable skills across TS7501. It highlights selected examples from SCLS, class activities group work and individual learning. It also includes evidence from other contexts, particularly my major course and other courses.</p>
+<p>Each example example from TS7501 - finding my way follows a specific template to include image evidence, the original reflection and an updated version of the same reflection based on given peer feedback from the discussion board to show the improvement of the reflection based on the feedback as well as improvement over my time of the course.</p>
+<h3>Evidence Types:</h3>
+<ul>
+<li><span style="font-size: 10pt;">Whitecliffe Past Assessment</span></li>
+<li><span style="font-size: 10pt;">Finding my Way Class Activities</span></li>
+</ul>
+<p>&nbsp;</p>
+<hr>
+<h3>Transferable Skills Course developed&nbsp;</h3>
+<p><strong>1. Reflective practice</strong><br>(Orientation, reflection models, SWOT, growth analysis)</p>
+<p><strong>2. Active learning</strong><br>(Focused &amp; diffuse thinking, chunking, Learning Fast framework, managing cognitive load)</p>
+<p><strong>3. Self-managed learning</strong><br>(Time management, identifying time thieves, SRL approach)</p>
+<p><strong>4. Collaborative learning</strong><br>(Building shared understanding, effective group discussion, listening to learn, psychological safety, constructive feedback)</p>
+<p><strong>5. Responsible AI use</strong><br>(Understanding AI, AI bias, ethical AI use, evaluating AI outputs)</p>
+<p><strong>6. Teamwork and collaboration</strong><br>(Working effectively in groups, communication within teams, conflict resolution, negotiation basics)</p>
+<p><strong>7. Critical thinking</strong><br>(Distinguishing fact from opinion, evaluating evidence, applying a critical thinking framework)</p>
+<p><strong>8. Problem solving</strong><br>(Identifying problems, framing solutions, analysing complex problems)</p>
+<p><strong>9.Communication skills</strong><br>(Written communication, verbal communication, presentation skills, professional communication)</p>
+<p><strong>10. Digital literacy</strong><br>(Digital productivity tools, shared documents, version control, collaboration features)</p>
+<p><strong>11. Data-informed decision-making</strong><br>(Data selection, pre-processing, analysis, interpreting results, ethical use of data)</p>
+<p><strong>12. Professional digital identity</strong><br>(Digital footprint, professional boundaries, online presence)</p>
+<p><strong>13. Ethical and culturally responsive practice</strong><br>(inclusive practice, values and responsibility)</p></p>
+  </div>
+</div>
+  <div class='section' role='region' aria-label='Tags'>
+    <h2 class='heading--title'>Tags</h2>
+    <div class='tags-container'>
+        <div class='tag-tag'>
+          <span class='tag-tag__text'>Strategic Learning</span>
+        </div>
+        <div class='tag-tag'>
+          <span class='tag-tag__text'>Collaborative Learning</span>
+        </div>
+        <div class='tag-tag'>
+          <span class='tag-tag__text'>Reflective Practising</span>
+        </div>
+        <div class='tag-tag'>
+          <span class='tag-tag__text'>Problem Solving</span>
+        </div>
+        <div class='tag-tag'>
+          <span class='tag-tag__text'>Collaborative Learning</span>
+        </div>
+        <div class='tag-tag'>
+          <span class='tag-tag__text'>Team Problem Solving</span>
+        </div>
+        <div class='tag-tag'>
+          <span class='tag-tag__text'>Team Discussion</span>
+        </div>
+        <div class='tag-tag'>
+          <span class='tag-tag__text'>Communication Practice</span>
+        </div>
+        <div class='tag-tag'>
+          <span class='tag-tag__text'>Strategic Learning</span>
+        </div>
+        <div class='tag-tag'>
+          <span class='tag-tag__text'>Responsible  AI Use</span>
+        </div>
+        <div class='tag-tag'>
+          <span class='tag-tag__text'>Reflective Practicing</span>
+        </div>
+        <div class='tag-tag'>
+          <span class='tag-tag__text'>Data Informed Decision Making</span>
+        </div>
+        <div class='tag-tag'>
+          <span class='tag-tag__text'>Collaborative Learning</span>
+        </div>
+        <div class='tag-tag'>
+          <span class='tag-tag__text'>Time Management</span>
+        </div>
+        <div class='tag-tag'>
+          <span class='tag-tag__text'>Problem Solving &amp; Critical Thinking</span>
+        </div>
+    </div>
+  </div>
+  <div class="heading--title">Evidence</div>
+
+    <div class="heading--module">Finding my Way - Friday Activities</div>
+      <div class="content-tray">
+        <div class='card-info'>
+          <div class='card-header'>
+            <div class='card-header__content'>
+                  <div class='badge-text--green'>Extracurricular activity</div>
+                    </div>
+          </div>
+            <div class='card-header'>
+              <div class='card-title--flex'>TS7501 Finding my Way - S1 2026 - Week 13 | Activity - [Session II]</div>
+            </div>
+            <div class='timestamp'>Date created: 06/06/2026</div>
+        </div>
+          <div class="tags-container">
+              <div class="tag-tag">
+                <span class="tag-tag__text">Strategic Learning</span>
+              </div>
+              <div class="tag-tag">
+                <span class="tag-tag__text">Collaborative Learning</span>
+              </div>
+              <div class="tag-tag">
+                <span class="tag-tag__text">Reflective Practising</span>
+              </div>
+          </div>
+
+        <div class='content-panel--green'>
+          <div class='panel-label'>Description</div>
+          <div class='text--panel'><pre><span style="font-size: 18pt;"><strong><i>Original Description - Discussion Board:</i></strong></span></pre>
+        <p><span>In our week 13 activity focused on using information ethically, specifically practicing on how to paraphrase and cite sources correctly when conducting research. the topic chosen by our group was open-source software, covering areas such as what open source software is, how it compares to closed source software, the risks associated with it and why someone might choose it. We utilized Frosty Mod Manager &amp; Frosty Editor as a real world example of open source software to ground our research and compiled a list in the APA format to backup our findings.</span></p>
+        <hr>
+        <pre><span style="font-size: 18pt;"><strong><i>Updated Description - Portfolio:</i></strong></span></pre>
+        <p>In week 13 our group conducted a research activity into open-source software as part of the activity primarily focused on the ethical use of information. The task required us to research, paraphrase and cite sources correctly in the APA format. While covering key areas of the topic including: "what open source software is, how it differs from its closed source software relatives, its associated risks and the reasons a user or developer may choose to use it". Frosty Mod manager and Frosty Editor were both prime examples to anchor the research in something concrete and applicable.</p></div>
+        </div>
+          <div class='content-panel--green'>
+            <div class='panel-label'>Reflection</div>
+            <div class='text--panel'><pre><span style="font-size: 18pt;"><strong><i>Original Reflection - Discussion Board:</i></strong></span></pre>
+          <p><strong><i>Analysis:</i></strong></p>
+          <p><span>The most challenging aspect of this activity was paraphrasing without falling into patchwriting, which is where you swap out a few words from the original source without truly rewriting the idea in your own words. When researching open source software I found myself initially restructuring sentences too closely to the original material than processing that same information and expressing it through my own opinion. This required me to slow down and genuinely understand the content before writing, rather than treating the source as a template.</span></p>
+          <p><strong><i>Insight:</i></strong></p>
+          <p><span>My understanding of citation also shifted thr4ough the session I had preciously treated references as a formality rather than an acknowledgement of where the ideas originated. seeing how sources directly shaped the structure of our research mase it clearer that citation is about intellectual honesty as much as it is avoiding plagiarism.</span></p>
+          <p><strong><i>Future Action:</i></strong></p>
+          <p><span>As an IT professional, theses skills will be directly relevant when writing technical documentation, reports or drawing on existing software and research. Moving forward I will make a conscious effort to completely rewrite the material through my own personal analysis of the material.</span></p>
+          <hr>
+          <pre><span style="font-size: 18pt;"><strong><i>Original Reflection - Peer Feedback:</i></strong></span></pre>
+          <p><span style="text-decoration: underline; font-size: 14pt;"><span style="color: #e62429; text-decoration: underline;"><strong><i>Aliaa Farag:</i></strong></span></span></p>
+          <p><span><span style="font-size: 24pt;"><strong><i></i></strong></span></span></p>
+          <p><span>Your reflection shows a clear understanding of ethical use of information, especially the difference between paraphrasing and patchwriting. I also agree with your point that paraphrasing requires real understanding rather than just changing words, because it is easy to stay too close to the original source without realizing it.</span></p>
+          <p><span><span style="font-size: 24pt;"><strong><i></i></strong></span></span></p>
+          <p><span><span style="font-size: 24pt;"><strong><i></i></strong></span></span></p>
+          <p><span>I like how you connected citation to intellectual honesty, not just an academic requirement. This is important because it changes how we see research work, especially when using multiple sources in a group project. Your example of open-source software also made the discussion more practical and easier to understand.</span></p>
+          <p><span><span style="font-size: 24pt;"><strong><i></i></strong></span></span></p>
+          <p><span><span style="font-size: 24pt;"><strong><i></i></strong></span></span></p>
+          <p><span><strong>One thing I would add is that patchwriting is often a step in learning, especially when dealing with new technical topics.</strong> Over time, with more practice, it becomes easier to break away from the structure of the original text and form your own academic voice.</span></p>
+          <p><span><span style="font-size: 24pt;"><strong><i></i></strong></span></span></p>
+          <p><span><span style="font-size: 24pt;"><strong><i></i></strong></span></span></p>
+          <p><span>Do you think using tools like note summaries before writing could help reduce patchwriting in future research tasks, especially in technical subjects like IT?</span></p>
+          <p><span style="color: #e62429; font-size: 14pt;"><strong><span style="text-decoration: underline;"><i>Luka Kelly:</i></span></strong></span></p>
+          <p><span>You reflection for this week is very good, you have shown where you have learnt and where you had challenges. I understand how falling into patchwork is very easy to do on accident. One area to improve could be to explain <strong>why paraphrasing without falling into patchwork was difficult</strong>. A strength you have in this reflection is your insight, you clearly show where your thinking has changed and what you have learned.</span></p>
+          <hr>
+          <p><span><span style="font-size: 24pt;"><strong><i></i></strong></span></span></p>
+          <pre><span class="post_mention" style="font-size: 18pt;"><strong><i>Updated Reflection - Portfolio:</i></strong></span></pre>
+          <p><span class="post_mention" style="font-size: 12pt;"><strong><i>Analysis - Updated:</i></strong></span></p>
+          <p>Working through this activity exposed a gap in my research process that I had not previously identified. My initial instinct when paraphrasing technical content was to stay close to the initial source material, adjusting wording without restructuring the idea independently. This activity assisted me in realizing that what I was doing was patchwriting not paraphrasing, it revealed that my reading and writhing had become disconnected I was processing text visually rather than intellectually. The shift required was to move away from reading and writing to reading processing and writing it in my own expression rather than just writing down what is seen. For a technical subject like open source software where precise terminology matters, this distinction becomes especially important because misrepresenting a concept through poor paraphrasing carries real consequences in a professional context.</p>
+          <ul>
+          <li><span style="font-family: OpenDyslexicMono, Monaco, Menlo, Consolas, 'Courier New', monospace;">Analysis - [Group Element - Feedback Based: Aliaa Farag]</span></li>
+          </ul>
+          <p>Aliaa affirmed that the connection I drew between citation and intellectual honesty, noting that this perspective is particularly relevant when multiple contributors are working from different sources withing a group project. She also offered a reframe that i found genuinely useful, suggesting that patchwriting is not necessarily a failure but a rather natural stage in in developing my own academic voice, particularly when engaging with unfamiliar technical material. this shifted my thinking away from treating it as an error to be corrected and toward treating it as diagnostic information about where my understanding the material was still incomplete.</p>
+          <ul>
+          <li><span style="font-family: OpenDyslexicMono, Monaco, Menlo, Consolas, 'Courier New', monospace;">Analysis - [Group Element - Feedback Based: Luka Kelly]</span></li>
+          </ul>
+          <p>Luka defined a key element missing reflection the could hold a critical point between a bad reflection and a good one where I should mention "<span>why paraphrasing without falling into patchwork was difficult?</span>". this can often be seen as difficult because while writing its easy to follow directly from a source while adding my own influence however it is more challenging to read a source and then just rewrite it how I would imagine it to be in my head this is what makes it s difficult to paraphrase for me.</p>
+          <p><span class="post_mention" style="font-size: 12pt;"><strong><i>Insight - Updated:</i></strong></span></p>
+          <p><span class="post_mention">This activity reframed citation for me in a way that will carry over into my professional practice. Referencing had previously felt like a compliance step, something done at the end to satisfy the requirement. What became clear throughout this session is that citation is a form of transparency, it documents intellectual pathway behind a piece of work and allows others evaluate the works viability and reliability of what would be produced. In an IT professional context this maps directly onto practices like version control, audit trails and documented sources in technical reports however the underlying principle remains unaltered: Showing your work and attributing influence is what makes any output trustworthy and verifiable.</span></p>
+          <p><span class="post_mention" style="font-size: 12pt;"><strong><i>Future Action - Updated:</i></strong></span></p>
+          <p><span class="post_mention">Going forward I will restructure how I engage with sources before writing rather than trying to paraphrase better in the moment. Specifically I will read a source, set it aside and rebuild the core idea from memory before writing a single sentence. This forces a genuine comprehension and naturally prevents patchwriting from occurring in the first place. Beyond the academic context I see this habit directly applicable to how I will handle technical research in an IT role, whether that is reviewing documentation, drawing on existing solutions or producing reports that require independent thinking about a particular topic.</span></p>
+          <p><span><span style="font-size: 24pt;"><span class="post_mention"><strong><i></i></strong></span></span></span></p>
+          <p><span><span style="font-size: 24pt;"><span class="post_mention"><strong><i></i></strong></span></span></span></p></div>
+          </div>
+          <div class='content-panel--green'>
+            <div class='panel-title'>Attachments</div>
+            <div class='attachments-groups'>
+                <div class='file-list'>
+                  <div class='panel-label--dark'>Added files</div>
+                    <div class='file-item'>
+                      <div class='file-item__content'>
+                        <div class='file-item__icon'><svg style="width: 30px; height: 30px;" viewBox="0 0 1920 1920"><path fill="#2D3B45" fill-rule="evenodd" d="M1920 113v1694.118H0V113h1920Zm-112.941 112.941H112.94V1694.29h1694.12V225.941ZM935.944 1058.77c182.851-258.409 332.498-286.87 426.691-264.847 160.716 37.384 272.076 242.26 330.805 608.98l10.504 65.392H207.924l20.104-71.718c85.384-306.07 172.913-457.072 283.37-489.712 102.55-30.156 185.336 43.82 258.86 109.1 43.596 38.514 90.806 81.092 122.542 78.834 15.925-1.807 32.188-20.556 43.144-36.029Zm401.167-154.842c-83.012-19.313-196.066 60.762-308.895 220.01-35.237 49.807-76.348 77.816-122.315 83.124-76.226 9.024-138.182-42.827-198.812-96.266l-3.868-3.413c-2.578-2.276-5.154-4.552-7.73-6.824-54.211-48.113-110.682-97.017-152.018-85.384-34.447 10.165-102.325 69.12-185.788 340.179h1212.762c-50.485-265.186-134.4-428.386-233.336-451.426ZM677.647 338.882c124.574 0 225.882 101.309 225.882 225.883 0 124.574-101.308 225.882-225.882 225.882S451.765 689.34 451.765 564.765s101.308-225.883 225.882-225.883Zm0 112.942c-62.343 0-112.941 50.71-112.941 112.94 0 62.231 50.598 112.942 112.941 112.942 62.344 0 112.941-50.71 112.941-112.941 0-62.23-50.597-112.941-112.94-112.941Z" /></svg></div>
+                        <div class='file-item__info'>
+                          <span class='file-item__name'>image.png</span>
+                          <div class='card-header__content'>
+                            <div class='file-item__type'>Image</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='file-item'>
+                      <div class='file-item__content'>
+                        <div class='file-item__icon'><svg style="width: 30px; height: 30px;" viewBox="0 0 1920 1920"><path fill="#2D3B45" fill-rule="evenodd" d="M1920 113v1694.118H0V113h1920Zm-112.941 112.941H112.94V1694.29h1694.12V225.941ZM935.944 1058.77c182.851-258.409 332.498-286.87 426.691-264.847 160.716 37.384 272.076 242.26 330.805 608.98l10.504 65.392H207.924l20.104-71.718c85.384-306.07 172.913-457.072 283.37-489.712 102.55-30.156 185.336 43.82 258.86 109.1 43.596 38.514 90.806 81.092 122.542 78.834 15.925-1.807 32.188-20.556 43.144-36.029Zm401.167-154.842c-83.012-19.313-196.066 60.762-308.895 220.01-35.237 49.807-76.348 77.816-122.315 83.124-76.226 9.024-138.182-42.827-198.812-96.266l-3.868-3.413c-2.578-2.276-5.154-4.552-7.73-6.824-54.211-48.113-110.682-97.017-152.018-85.384-34.447 10.165-102.325 69.12-185.788 340.179h1212.762c-50.485-265.186-134.4-428.386-233.336-451.426ZM677.647 338.882c124.574 0 225.882 101.309 225.882 225.883 0 124.574-101.308 225.882-225.882 225.882S451.765 689.34 451.765 564.765s101.308-225.883 225.882-225.883Zm0 112.942c-62.343 0-112.941 50.71-112.941 112.94 0 62.231 50.598 112.942 112.941 112.942 62.344 0 112.941-50.71 112.941-112.941 0-62.23-50.597-112.941-112.94-112.941Z" /></svg></div>
+                        <div class='file-item__info'>
+                          <span class='file-item__name'>image (1).png</span>
+                          <div class='card-header__content'>
+                            <div class='file-item__type'>Image</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='file-item'>
+                      <div class='file-item__content'>
+                        <div class='file-item__icon'><svg style="width: 30px; height: 30px;" viewBox="0 0 1920 1920"><path fill="#2D3B45" fill-rule="evenodd" d="M1920 113v1694.118H0V113h1920Zm-112.941 112.941H112.94V1694.29h1694.12V225.941ZM935.944 1058.77c182.851-258.409 332.498-286.87 426.691-264.847 160.716 37.384 272.076 242.26 330.805 608.98l10.504 65.392H207.924l20.104-71.718c85.384-306.07 172.913-457.072 283.37-489.712 102.55-30.156 185.336 43.82 258.86 109.1 43.596 38.514 90.806 81.092 122.542 78.834 15.925-1.807 32.188-20.556 43.144-36.029Zm401.167-154.842c-83.012-19.313-196.066 60.762-308.895 220.01-35.237 49.807-76.348 77.816-122.315 83.124-76.226 9.024-138.182-42.827-198.812-96.266l-3.868-3.413c-2.578-2.276-5.154-4.552-7.73-6.824-54.211-48.113-110.682-97.017-152.018-85.384-34.447 10.165-102.325 69.12-185.788 340.179h1212.762c-50.485-265.186-134.4-428.386-233.336-451.426ZM677.647 338.882c124.574 0 225.882 101.309 225.882 225.883 0 124.574-101.308 225.882-225.882 225.882S451.765 689.34 451.765 564.765s101.308-225.883 225.882-225.883Zm0 112.942c-62.343 0-112.941 50.71-112.941 112.94 0 62.231 50.598 112.942 112.941 112.942 62.344 0 112.941-50.71 112.941-112.941 0-62.23-50.597-112.941-112.94-112.941Z" /></svg></div>
+                        <div class='file-item__info'>
+                          <span class='file-item__name'>image (2).png</span>
+                          <div class='card-header__content'>
+                            <div class='file-item__type'>Image</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>        <div class='links-container'>
+                  <div class='panel-label--dark'>Links</div>
+                    <div class='link-item'>
+                      <div class='link-item__icon'><svg viewBox="0 0 1920 1920"><path fill="#000" fill-rule="evenodd" d="M1866.003 351.563 1565.128 50.575c-69.46-67.652-180.932-67.426-248.923.565L906.23 461.116c-68.33 68.443-68.33 179.69.113 248.132l31.623 31.624 79.737-79.963-31.624-31.51c-24.282-24.396-24.282-64.038 0-88.433l409.977-409.977c24.508-24.395 64.828-24.17 89.675 0l299.859 299.972c24.734 25.186 24.847 65.619.564 90.014l-409.976 409.977c-24.508 24.282-64.15 24.282-88.546 0l-110.795-110.909 159.473-159.36-79.85-79.85-435.614 435.502-109.779-109.779c-32.866-33.656-76.8-52.292-123.67-52.63-43.596 1.694-92.273 18.296-126.156 52.178L51.377 1316.081c-68.442 68.442-68.442 179.69 0 248.132l301.553 301.553c34.108 34.108 79.059 51.275 124.01 51.275 44.95 0 89.9-17.167 124.122-51.275l409.976-409.977c33.77-33.882 52.405-78.607 52.066-126.042-.226-46.984-18.974-90.918-52.066-123.219l-30.494-30.494-79.85 79.85 30.946 30.945c11.86 11.633 18.41 27.106 18.523 43.595.113 16.942-6.664 33.092-18.974 45.516l-409.977 409.976c-23.492 23.492-64.94 23.492-88.433 0l-301.553-301.553c-11.746-11.746-18.183-27.444-18.183-44.273 0-16.715 6.437-32.414 18.183-44.16l409.977-409.976c12.197-12.31 28.235-19.087 45.063-19.087h.452c16.49.113 31.962 6.663 43.934 19.087l110.344 110.23-162.184 162.297 79.85 79.85 438.324-438.438 110.796 110.908c34.334 34.221 79.171 51.275 124.122 51.275 44.95 0 89.901-17.054 124.122-51.275l409.977-409.977c67.877-67.99 67.99-179.463 0-249.26" /></svg></div>
+                      <a href='https://learn.mywhitecliffe.com/courses/2488/discussion_topics/17464?entry_id&#x3D;18154' class='link-item__text' target='_blank' rel='noopener noreferrer'>Link to my Original Reflection [Post - Unaltered]</a>
+                    </div>
+                    <div class='link-item'>
+                      <div class='link-item__icon'><svg viewBox="0 0 1920 1920"><path fill="#000" fill-rule="evenodd" d="M1866.003 351.563 1565.128 50.575c-69.46-67.652-180.932-67.426-248.923.565L906.23 461.116c-68.33 68.443-68.33 179.69.113 248.132l31.623 31.624 79.737-79.963-31.624-31.51c-24.282-24.396-24.282-64.038 0-88.433l409.977-409.977c24.508-24.395 64.828-24.17 89.675 0l299.859 299.972c24.734 25.186 24.847 65.619.564 90.014l-409.976 409.977c-24.508 24.282-64.15 24.282-88.546 0l-110.795-110.909 159.473-159.36-79.85-79.85-435.614 435.502-109.779-109.779c-32.866-33.656-76.8-52.292-123.67-52.63-43.596 1.694-92.273 18.296-126.156 52.178L51.377 1316.081c-68.442 68.442-68.442 179.69 0 248.132l301.553 301.553c34.108 34.108 79.059 51.275 124.01 51.275 44.95 0 89.9-17.167 124.122-51.275l409.976-409.977c33.77-33.882 52.405-78.607 52.066-126.042-.226-46.984-18.974-90.918-52.066-123.219l-30.494-30.494-79.85 79.85 30.946 30.945c11.86 11.633 18.41 27.106 18.523 43.595.113 16.942-6.664 33.092-18.974 45.516l-409.977 409.976c-23.492 23.492-64.94 23.492-88.433 0l-301.553-301.553c-11.746-11.746-18.183-27.444-18.183-44.273 0-16.715 6.437-32.414 18.183-44.16l409.977-409.976c12.197-12.31 28.235-19.087 45.063-19.087h.452c16.49.113 31.962 6.663 43.934 19.087l110.344 110.23-162.184 162.297 79.85 79.85 438.324-438.438 110.796 110.908c34.334 34.221 79.171 51.275 124.122 51.275 44.95 0 89.901-17.054 124.122-51.275l409.977-409.977c67.877-67.99 67.99-179.463 0-249.26" /></svg></div>
+                      <a href='https://learn.mywhitecliffe.com/courses/2488/discussion_topics/17464?entry_id&#x3D;18220' class='link-item__text' target='_blank' rel='noopener noreferrer'>Link to Aliaa Farag&#x27;s Feedback [Comment]</a>
+                    </div>
+                    <div class='link-item'>
+                      <div class='link-item__icon'><svg viewBox="0 0 1920 1920"><path fill="#000" fill-rule="evenodd" d="M1866.003 351.563 1565.128 50.575c-69.46-67.652-180.932-67.426-248.923.565L906.23 461.116c-68.33 68.443-68.33 179.69.113 248.132l31.623 31.624 79.737-79.963-31.624-31.51c-24.282-24.396-24.282-64.038 0-88.433l409.977-409.977c24.508-24.395 64.828-24.17 89.675 0l299.859 299.972c24.734 25.186 24.847 65.619.564 90.014l-409.976 409.977c-24.508 24.282-64.15 24.282-88.546 0l-110.795-110.909 159.473-159.36-79.85-79.85-435.614 435.502-109.779-109.779c-32.866-33.656-76.8-52.292-123.67-52.63-43.596 1.694-92.273 18.296-126.156 52.178L51.377 1316.081c-68.442 68.442-68.442 179.69 0 248.132l301.553 301.553c34.108 34.108 79.059 51.275 124.01 51.275 44.95 0 89.9-17.167 124.122-51.275l409.976-409.977c33.77-33.882 52.405-78.607 52.066-126.042-.226-46.984-18.974-90.918-52.066-123.219l-30.494-30.494-79.85 79.85 30.946 30.945c11.86 11.633 18.41 27.106 18.523 43.595.113 16.942-6.664 33.092-18.974 45.516l-409.977 409.976c-23.492 23.492-64.94 23.492-88.433 0l-301.553-301.553c-11.746-11.746-18.183-27.444-18.183-44.273 0-16.715 6.437-32.414 18.183-44.16l409.977-409.976c12.197-12.31 28.235-19.087 45.063-19.087h.452c16.49.113 31.962 6.663 43.934 19.087l110.344 110.23-162.184 162.297 79.85 79.85 438.324-438.438 110.796 110.908c34.334 34.221 79.171 51.275 124.122 51.275 44.95 0 89.901-17.054 124.122-51.275l409.977-409.977c67.877-67.99 67.99-179.463 0-249.26" /></svg></div>
+                      <a href='https://learn.mywhitecliffe.com/courses/2488/discussion_topics/17464?entry_id&#x3D;18573' class='link-item__text' target='_blank' rel='noopener noreferrer'>Link to Luka Kelly&#x27;s Feedback [Comment]</a>
+                    </div>
+                </div>    </div>
+          </div>
+
+      </div>
+      <div class="content-tray">
+        <div class='card-info'>
+          <div class='card-header'>
+            <div class='card-header__content'>
+                  <div class='badge-text--green'>Extracurricular activity</div>
+                    </div>
+          </div>
+            <div class='card-header'>
+              <div class='card-title--flex'>TS7501 Finding my Way - S1 2026 - Week 10 | Activity - [Session II]</div>
+            </div>
+            <div class='timestamp'>Date created: 05/20/2026</div>
+        </div>
+          <div class="tags-container">
+              <div class="tag-tag">
+                <span class="tag-tag__text">Problem Solving</span>
+              </div>
+              <div class="tag-tag">
+                <span class="tag-tag__text">Collaborative Learning</span>
+              </div>
+              <div class="tag-tag">
+                <span class="tag-tag__text">Team Problem Solving</span>
+              </div>
+          </div>
+
+        <div class='content-panel--green'>
+          <div class='panel-label'>Description</div>
+          <div class='text--panel'><pre><span style="font-size: 18pt;"><strong><i>Original Description - Discussion Board:</i></strong></span></pre>
+        <p><span>In today's session my group was assigned the task of solving a problem with an AI modal that is tasked with interviewing candidates for a position. However with the modal being flawed our task was to come up with a solution that would give candidates a fair opportunity since the AI model doesn't consider a candidate's skill level or their adaptability to a certain task. </span><span>The AI model will only focus on a potential employees facial expression and confident attitude because that is all it was told to target.</span></p>
+        <hr>
+        <pre><span style="font-size: 18pt;"><strong><i>Updated Description - Portfolio:</i></strong></span></pre>
+        <p>In todays session, my group was assigned the task of solving a problem involving an AI modal that interviews candidates for a job position. This AI model proved to be flawed because it only evaluated candidates based on their facial expressions and confidence levels without considering or comparing skill level, experience or ability to adapt to the role. Our task was to identify these issues and suggest ways to create a more effective hiring process for each and every candidate.</p></div>
+        </div>
+          <div class='content-panel--green'>
+            <div class='panel-label'>Reflection</div>
+            <div class='text--panel'><pre><span style="font-size: 18pt;"><strong><i>Original Reflection - Discussion Board:</i></strong></span><strong><i></i></strong></pre>
+          <p><span style="font-size: 12pt;"><strong><i>Analysis:</i></strong></span></p>
+          <p><span>My analysis of this particular AI model showed that by simply only focusing on someone's confident expression can prove to be a critical flaw because the way someone expresses themselves does not reflect the way they work in a particular environment instead what would make a more effective AI model as described in the teams meeting would be telling the AI model to not only look at their expressions but compare their resume data to a real outlook on what the employer is looking for.</span></p>
+          <p><span style="font-size: 12pt;"><strong><i>Insight:</i></strong></span></p>
+          <p><span>My perspective on how this AI model was trained will only prove to be ineffective and has the potential to do more damage than good for a company if the AI model is not looking for specific qualities in a potential employee because if the employee looks amazing but has poor work ethic that can go undetected and affect the companies reputation or disrupt any at all productivity.</span></p>
+          <p><span style="font-size: 12pt;"><strong><i>Future Action:</i></strong></span></p>
+          <p><span>For any future action I suggest telling the AI model to compare resume data, consider facial expressions as well as ensuring the potential employee has minimal prior history of productivity disruption; this would prove to be far more effective when utilizing AI to look at hundreds of potential employees resume data.</span></p>
+          <hr>
+          <pre><span style="font-size: 18pt;"><strong><i>Original Reflection - Peer Feedback:</i></strong></span></pre>
+          <p><span style="text-decoration: underline;"><span style="font-size: 14pt; color: #e62429; text-decoration: underline;"><strong><i>Fatimah Almukhtar:</i></strong></span></span></p>
+          <div>
+          <p><span class="post_mention" style="font-size: 12pt; font-family: 'Lato Extended', 'Helvetica Neue', Helvetica, Arial, sans-serif;">This reflection shows a solid understanding of why the AI model is flawed and offers a practical, well-reasoned solution by suggesting that resume data and work history should be considered alongside facial expressions. The point made in the Insight section is particularly strong &nbsp;the idea that an employee could appear confident but have poor work ethic and go completely undetected is a real and important risk that shows genuine critical thinking. However, the reflection would be much stronger if it included at least one specific moment from the group discussion, <strong>such as something a teammate said or a question that challenged your thinking</strong>, because right now it reads more like a personal opinion piece than a group reflection. The Analysis section is also one long sentence which makes it difficult to follow breaking it into two or three shorter sentences would make your ideas much clearer and easier to read. <strong>Overall the thinking is strong, but the personal and group elements need more development.</strong></span></p>
+          <hr>
+          <pre><span class="post_mention" style="font-size: 18pt;"><strong><i>Updated Reflection - Portfolio:</i></strong></span></pre>
+          <p><span class="post_mention" style="font-size: 12pt;"><strong><i>Analysis - Updated:</i></strong></span></p>
+          <p><span class="post_mention">Through our group discussion, I recognized that relying solely on facial expressions and confidence is a critical weakness in the AI model. Since a candidates expression cannot directly reflect something like their skill level required for the role or their ability to perform the job successfully this can prove to be an extremely critical flaw within the AI model.&nbsp;</span></p>
+          <ul style="list-style-type: square;">
+          <li><span style="font-family: OpenDyslexicMono, Monaco, Menlo, Consolas, 'Courier New', monospace;">Analysis - [Group Element - Feedback Based: Fatimah]</span></li>
+          </ul>
+          <p><span class="post_mention">One point raised by a fellow group member that had semi-influence on my thinking was that some highly skilled candidates that could perform the job really well may be nervous and in time this would cost them a potential well earning job due to a critical error in the AI model which can have a chain reaction in the companies performance. </span></p>
+          <ul style="list-style-type: square;">
+          <li><span style="font-family: OpenDyslexicMono, Monaco, Menlo, Consolas, 'Courier New', monospace;">Analysis - [Personal Element - Feedback Based]</span></li>
+          </ul>
+          <p>I also realized that due to this programming error the AI models flaw will be able to remain hidden for a decent amount of time due to it seeming insignificant. As well as being limited on the the ability to process candidate data I noticed that the AI model lacked important sources of information that employers typically use when making hiring decisions. Rather than only focusing on expressions the AI model should compare a candidate's qualifications, experience, and resume data against the requirements for the position</p>
+          <p><span class="post_mention" style="font-size: 12pt;"><strong><i>Insight - Updated:</i></strong></span></p>
+          <p><span class="post_mention">This activity assisted me in realizing the importance of training AI systems using relevant and meaningful data as well as characteristics. If an AI model is designed to only focus on one data type such as facial expressions or work ethic the model can only produce biased or filtered results which can prove to limit the companies hiring abilities. A candidate can appear to be professional and confident while having poor work habits or limited experience if one of these characteristics is overlooked then the candidate is barely considered due to the AI having biased filtered preferences. This demonstrates how poor AI design can negatively impact job seekers as well as employers.</span></p>
+          <p><span class="post_mention" style="font-size: 12pt;"><strong><i>Future Action - Updated:</i></strong></span></p>
+          <p><span class="post_mention">Being challenged on my thinking that can have a high impact on a critical situation such as this really shows how more than one input can really pay off. However in the future I can see a more recommended course of action that when presenting such critical work elements such as the given AI model example should be shown to others for educational feedback for errors that could have been missed or overlooked by the</span> creator.</p>
+          </div>
+          <p><span><span style="font-size: 24pt;"><strong><i></i></strong></span></span></p></div>
+          </div>
+          <div class='content-panel--green'>
+            <div class='panel-title'>Attachments</div>
+            <div class='attachments-groups'>
+                <div class='file-list'>
+                  <div class='panel-label--dark'>Added files</div>
+                    <div class='file-item'>
+                      <div class='file-item__content'>
+                        <div class='file-item__icon'><svg style="width: 30px; height: 30px;" viewBox="0 0 1920 1920"><path fill="#2D3B45" fill-rule="evenodd" d="M1920 113v1694.118H0V113h1920Zm-112.941 112.941H112.94V1694.29h1694.12V225.941ZM935.944 1058.77c182.851-258.409 332.498-286.87 426.691-264.847 160.716 37.384 272.076 242.26 330.805 608.98l10.504 65.392H207.924l20.104-71.718c85.384-306.07 172.913-457.072 283.37-489.712 102.55-30.156 185.336 43.82 258.86 109.1 43.596 38.514 90.806 81.092 122.542 78.834 15.925-1.807 32.188-20.556 43.144-36.029Zm401.167-154.842c-83.012-19.313-196.066 60.762-308.895 220.01-35.237 49.807-76.348 77.816-122.315 83.124-76.226 9.024-138.182-42.827-198.812-96.266l-3.868-3.413c-2.578-2.276-5.154-4.552-7.73-6.824-54.211-48.113-110.682-97.017-152.018-85.384-34.447 10.165-102.325 69.12-185.788 340.179h1212.762c-50.485-265.186-134.4-428.386-233.336-451.426ZM677.647 338.882c124.574 0 225.882 101.309 225.882 225.883 0 124.574-101.308 225.882-225.882 225.882S451.765 689.34 451.765 564.765s101.308-225.883 225.882-225.883Zm0 112.942c-62.343 0-112.941 50.71-112.941 112.94 0 62.231 50.598 112.942 112.941 112.942 62.344 0 112.941-50.71 112.941-112.941 0-62.23-50.597-112.941-112.94-112.941Z" /></svg></div>
+                        <div class='file-item__info'>
+                          <span class='file-item__name'>AI Modal Employee Problem - Solution.png</span>
+                          <div class='card-header__content'>
+                            <div class='file-item__type'>Image</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>        <div class='links-container'>
+                  <div class='panel-label--dark'>Links</div>
+                    <div class='link-item'>
+                      <div class='link-item__icon'><svg viewBox="0 0 1920 1920"><path fill="#000" fill-rule="evenodd" d="M1866.003 351.563 1565.128 50.575c-69.46-67.652-180.932-67.426-248.923.565L906.23 461.116c-68.33 68.443-68.33 179.69.113 248.132l31.623 31.624 79.737-79.963-31.624-31.51c-24.282-24.396-24.282-64.038 0-88.433l409.977-409.977c24.508-24.395 64.828-24.17 89.675 0l299.859 299.972c24.734 25.186 24.847 65.619.564 90.014l-409.976 409.977c-24.508 24.282-64.15 24.282-88.546 0l-110.795-110.909 159.473-159.36-79.85-79.85-435.614 435.502-109.779-109.779c-32.866-33.656-76.8-52.292-123.67-52.63-43.596 1.694-92.273 18.296-126.156 52.178L51.377 1316.081c-68.442 68.442-68.442 179.69 0 248.132l301.553 301.553c34.108 34.108 79.059 51.275 124.01 51.275 44.95 0 89.9-17.167 124.122-51.275l409.976-409.977c33.77-33.882 52.405-78.607 52.066-126.042-.226-46.984-18.974-90.918-52.066-123.219l-30.494-30.494-79.85 79.85 30.946 30.945c11.86 11.633 18.41 27.106 18.523 43.595.113 16.942-6.664 33.092-18.974 45.516l-409.977 409.976c-23.492 23.492-64.94 23.492-88.433 0l-301.553-301.553c-11.746-11.746-18.183-27.444-18.183-44.273 0-16.715 6.437-32.414 18.183-44.16l409.977-409.976c12.197-12.31 28.235-19.087 45.063-19.087h.452c16.49.113 31.962 6.663 43.934 19.087l110.344 110.23-162.184 162.297 79.85 79.85 438.324-438.438 110.796 110.908c34.334 34.221 79.171 51.275 124.122 51.275 44.95 0 89.901-17.054 124.122-51.275l409.977-409.977c67.877-67.99 67.99-179.463 0-249.26" /></svg></div>
+                      <a href='https://learn.mywhitecliffe.com/courses/2488/discussion_topics/17260?entry_id&#x3D;17076' class='link-item__text' target='_blank' rel='noopener noreferrer'>Link to Fatimah&#x27;s Feedback [Comment]</a>
+                    </div>
+                    <div class='link-item'>
+                      <div class='link-item__icon'><svg viewBox="0 0 1920 1920"><path fill="#000" fill-rule="evenodd" d="M1866.003 351.563 1565.128 50.575c-69.46-67.652-180.932-67.426-248.923.565L906.23 461.116c-68.33 68.443-68.33 179.69.113 248.132l31.623 31.624 79.737-79.963-31.624-31.51c-24.282-24.396-24.282-64.038 0-88.433l409.977-409.977c24.508-24.395 64.828-24.17 89.675 0l299.859 299.972c24.734 25.186 24.847 65.619.564 90.014l-409.976 409.977c-24.508 24.282-64.15 24.282-88.546 0l-110.795-110.909 159.473-159.36-79.85-79.85-435.614 435.502-109.779-109.779c-32.866-33.656-76.8-52.292-123.67-52.63-43.596 1.694-92.273 18.296-126.156 52.178L51.377 1316.081c-68.442 68.442-68.442 179.69 0 248.132l301.553 301.553c34.108 34.108 79.059 51.275 124.01 51.275 44.95 0 89.9-17.167 124.122-51.275l409.976-409.977c33.77-33.882 52.405-78.607 52.066-126.042-.226-46.984-18.974-90.918-52.066-123.219l-30.494-30.494-79.85 79.85 30.946 30.945c11.86 11.633 18.41 27.106 18.523 43.595.113 16.942-6.664 33.092-18.974 45.516l-409.977 409.976c-23.492 23.492-64.94 23.492-88.433 0l-301.553-301.553c-11.746-11.746-18.183-27.444-18.183-44.273 0-16.715 6.437-32.414 18.183-44.16l409.977-409.976c12.197-12.31 28.235-19.087 45.063-19.087h.452c16.49.113 31.962 6.663 43.934 19.087l110.344 110.23-162.184 162.297 79.85 79.85 438.324-438.438 110.796 110.908c34.334 34.221 79.171 51.275 124.122 51.275 44.95 0 89.901-17.054 124.122-51.275l409.977-409.977c67.877-67.99 67.99-179.463 0-249.26" /></svg></div>
+                      <a href='https://learn.mywhitecliffe.com/courses/2488/discussion_topics/17260?entry_id&#x3D;16819' class='link-item__text' target='_blank' rel='noopener noreferrer'>Link to my Original Reflection [Post - Unaltered]</a>
+                    </div>
+                </div>    </div>
+          </div>
+
+      </div>
+      <div class="content-tray">
+        <div class='card-info'>
+          <div class='card-header'>
+            <div class='card-header__content'>
+                  <div class='badge-text--green'>Extracurricular activity</div>
+                    </div>
+          </div>
+            <div class='card-header'>
+              <div class='card-title--flex'>TS7501 Finding my Way - S1 2026 - Week 1 | Activity - [Session II]</div>
+            </div>
+            <div class='timestamp'>Date created: 05/20/2026</div>
+        </div>
+          <div class="tags-container">
+              <div class="tag-tag">
+                <span class="tag-tag__text">Team Discussion</span>
+              </div>
+              <div class="tag-tag">
+                <span class="tag-tag__text">Communication Practice</span>
+              </div>
+              <div class="tag-tag">
+                <span class="tag-tag__text">Strategic Learning</span>
+              </div>
+          </div>
+
+        <div class='content-panel--green'>
+          <div class='panel-label'>Description</div>
+          <div class='text--panel'><pre><span style="font-size: 18pt;"><strong><i>Original Description - Discussion Board:</i></strong></span></pre>
+        <p><span>In week 1 we explored the subject of climate change as a wicked problem and as far as common knowledge goes a wicked problem is complicated, ongoing and contains no single solution proven to be effective in dealing with these kinds of problems. </span></p>
+        <p><span>Climate change as a whole is often influenced by many different factors such as industrial production, greenhouse gas emissions, fossil fuel consumption, deforestation&nbsp; and global economic systems. B</span><span>ecause of these overlapping causes it cannot be solved directly through a simple action or policy change.</span></p>
+        <hr>
+        <pre><span style="font-size: 18pt;"><strong><i>Updated Description - Portfolio:</i></strong></span></pre>
+        <p><span style="font-size: 12pt;">For the first week of finding my way our group was tasked with discussing climate changed as a wicked problem which is a kind of problem defined by its complexity and its resistance to a straight forward solution and its tendency to evolve rather than be solved. What distinguishes a wicked problem from a complicated one is that there is no definitive answer, only a series that carry their own trade offs and consequences. Climate change fits this particular definition because its root cause is not directly isolated. Industrial pollution, greenhouse gas emissions, fossil fuel, deforestation are all factoring contributors to climate change simultaneously, meaning the problem cannot be address by an isolated factor&nbsp; "if one factor exists then the problem exists"</span></p></div>
+        </div>
+          <div class='content-panel--green'>
+            <div class='panel-label'>Reflection</div>
+            <div class='text--panel'><pre><span style="font-size: 18pt;"><strong><i>Original Reflection - Discussion Board:</i></strong></span></pre>
+          <p><em><strong>Analysis:</strong></em></p>
+          <p><span>Before this session I primarily viewed climate change as a mere environmental issue however during the discussion I was led to believe otherwise. It reflects a lack of foresight on humanity's part and is deeply connected to economic, political, and social systems. Different stakeholders, governments and businesses all carry their own beliefs and ideas which make agreement when trying to resolve a problem that we collectively created a challenge, hearing different viewpoints on this particular subject altered my perspective to look at the problem from a new angle.</span><span><br><br></span></p>
+          <p><em><strong>Educational Insight:</strong></em></p>
+          <p><span>I learned that wicked issues cannot be directly resolved in any simple way like a simple code error fix because it will require continuous effort, cooperation and balancing trade-offs rather than expecting one perfect solution to fix the issue. This experience showed me that complex issues require broader thinking styles and discussion to fully understand their depth and complexity.</span></p>
+          <hr>
+          <pre><span style="font-size: 18pt;"><strong><i>Original Reflection - Peer Feedback:</i></strong></span></pre>
+          <p><span style="text-decoration: underline;"><span style="color: #e62429; text-decoration: underline;"><span style="font-size: 24pt;"><strong><i><span style="font-size: 14pt;">MD Raihan Joy:</span></i></strong></span></span></span></p>
+          <p><span>It was really an interesting reflection to be honest and you were very unique in terms of your thoughts. Most of the classmates focused more on environmental causes however you portrayed it as a systematic issue. <strong>The correlation between solving the Wicked Problem and fixing a code error is something I haven't seen on anyone's reflection.</strong> It was very easy to catch your point and I really appreciate it as it shows that it is something which needs to be adapted over time and it's not an one time solution also the difficulties while balancing mixed interests of stakeholders as well as your reflection shows that you have understood why thinking from different perspectives is needed for handling global problems.</span></p>
+          <p><span style="text-decoration: underline;"><span style="font-size: 18.6667px; color: #e62429; text-decoration: underline;"><strong><i>Caleb Lambert:</i></strong></span></span></p>
+          <p><span style="font-size: 12pt;"><strong>I found it how you explored the deeper subject of climate change and the many different factors</strong> and problems of climate change and I also find it interesting before week 1 you viewed&nbsp;climate change as a mere environmental issue but during the discussion you were lead to believe otherwise I also I found it interesting you saw&nbsp;<span class="post_mention">that wicked issues cannot be directly resolved in any simple way and used an example of&nbsp;</span><span class="post_mention">simple code error fix issue I found it interesting that you saw it as&nbsp;</span><span class="post_mention">that complex issues require a broader thinking style and a discussion to fully understand the depth and complexity of the topic.</span></span></p>
+          <hr>
+          <pre><span class="post_mention" style="font-size: 18pt;"><strong><i>Updated Reflection - Portfolio:</i></strong></span></pre>
+          <p><span class="post_mention" style="font-size: 12pt;"><strong><i>Analysis - Updated:</i></strong></span></p>
+          <p>Throughout week one I reinforced my understanding that climate change while carries the potential be an environmental issue but in our case is a systematic one, shaped by the overlapping influence of industrial production, greenhouse gas emissions and more. Because these causes are so intertwined no single policy or action will resolve the issue in isolation. what became clearer through the discussion was that this is ultimately a reflection of collective failure in foresight.</p>
+          <ul>
+          <li><span style="font-family: OpenDyslexicMono, Monaco, Menlo, Consolas, 'Courier New', monospace;">Analysis - [Group Element - Feedback Based: MD Raihan Joy]</span></li>
+          </ul>
+          <p><span class="post_mention">One point mentioned by me that Raihan had noted was my framing of climate change as a systematic issue rather than purely environmental issue was distinctive, pointing out that most classmates approached the topic with a more surface-level environmental angle. this feedback assisted me in realizing that comparing one problem to another is that many problems carry similar solution styles</span></p>
+          <ul>
+          <li><span style="font-family: OpenDyslexicMono, Monaco, Menlo, Consolas, 'Courier New', monospace;">Analysis - [Group Element - Feedback Based: Caleb Lambert]</span></li>
+          </ul>
+          <p>Caleb had a positive response to how I was able seek out more that one potential factor to climate change's problem that not all problems have one root cause, specifically I entered this discussion thinking that climate change was a human made problem but it can be both environmental or man-made. His feedback was a critical take away that realizing complex issues require broader thinking styles and open discussion rather than an isolated analysis.</p>
+          <hr>
+          <p><span class="post_mention" style="font-size: 12pt;"><strong><i>Insight - Updated:</i></strong></span></p>
+          <p><span class="post_mention">This activity assisted me in understanding that wicked problems demand a fundamentally different mode of thinking entirely compared to technical or straightforward problems. rather than searching for a singular correct answer, the goal is to manage complexity through continuous effort, cooperation and a willingness to balance priorities. The feedback from both MD Raihan Joy &amp; Caleb Lambert reinforced that broadening my perspective to consider outside dimensions to one problem for climate change one dimension could be economically or another could be a political ambition.</span></p>
+          <hr>
+          <p><span class="post_mention" style="font-size: 12pt;"><strong><i>Future Action - Updated:</i></strong></span></p>
+          <p>Having framing validated and expanded through the feedback from MD Raihan Joy &amp; Caleb Lambert demonstrated the real value of collaborative discussion when engaging with more complex topics. Moving forward, I intend to actively see out alternate viewpoints for the same problem as spoken about in my analyses. Engaging with different perspectives from the outset would allow for a more well rounded initial understanding and would also likely surface new dimensions of a problem that a surface reflection alone tends to miss.</p></div>
+          </div>
+          <div class='content-panel--green'>
+            <div class='panel-title'>Attachments</div>
+            <div class='attachments-groups'>
+                <div class='file-list'>
+                  <div class='panel-label--dark'>Added files</div>
+                    <div class='file-item'>
+                      <div class='file-item__content'>
+                        <div class='file-item__icon'><svg style="width: 30px; height: 30px;" viewBox="0 0 1920 1920"><path fill="#2D3B45" fill-rule="evenodd" d="M1920 113v1694.118H0V113h1920Zm-112.941 112.941H112.94V1694.29h1694.12V225.941ZM935.944 1058.77c182.851-258.409 332.498-286.87 426.691-264.847 160.716 37.384 272.076 242.26 330.805 608.98l10.504 65.392H207.924l20.104-71.718c85.384-306.07 172.913-457.072 283.37-489.712 102.55-30.156 185.336 43.82 258.86 109.1 43.596 38.514 90.806 81.092 122.542 78.834 15.925-1.807 32.188-20.556 43.144-36.029Zm401.167-154.842c-83.012-19.313-196.066 60.762-308.895 220.01-35.237 49.807-76.348 77.816-122.315 83.124-76.226 9.024-138.182-42.827-198.812-96.266l-3.868-3.413c-2.578-2.276-5.154-4.552-7.73-6.824-54.211-48.113-110.682-97.017-152.018-85.384-34.447 10.165-102.325 69.12-185.788 340.179h1212.762c-50.485-265.186-134.4-428.386-233.336-451.426ZM677.647 338.882c124.574 0 225.882 101.309 225.882 225.883 0 124.574-101.308 225.882-225.882 225.882S451.765 689.34 451.765 564.765s101.308-225.883 225.882-225.883Zm0 112.942c-62.343 0-112.941 50.71-112.941 112.94 0 62.231 50.598 112.942 112.941 112.942 62.344 0 112.941-50.71 112.941-112.941 0-62.23-50.597-112.941-112.94-112.941Z" /></svg></div>
+                        <div class='file-item__info'>
+                          <span class='file-item__name'>Group discussion - climate change [Answers].png</span>
+                          <div class='card-header__content'>
+                            <div class='file-item__type'>Image</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>        <div class='links-container'>
+                  <div class='panel-label--dark'>Links</div>
+                    <div class='link-item'>
+                      <div class='link-item__icon'><svg viewBox="0 0 1920 1920"><path fill="#000" fill-rule="evenodd" d="M1866.003 351.563 1565.128 50.575c-69.46-67.652-180.932-67.426-248.923.565L906.23 461.116c-68.33 68.443-68.33 179.69.113 248.132l31.623 31.624 79.737-79.963-31.624-31.51c-24.282-24.396-24.282-64.038 0-88.433l409.977-409.977c24.508-24.395 64.828-24.17 89.675 0l299.859 299.972c24.734 25.186 24.847 65.619.564 90.014l-409.976 409.977c-24.508 24.282-64.15 24.282-88.546 0l-110.795-110.909 159.473-159.36-79.85-79.85-435.614 435.502-109.779-109.779c-32.866-33.656-76.8-52.292-123.67-52.63-43.596 1.694-92.273 18.296-126.156 52.178L51.377 1316.081c-68.442 68.442-68.442 179.69 0 248.132l301.553 301.553c34.108 34.108 79.059 51.275 124.01 51.275 44.95 0 89.9-17.167 124.122-51.275l409.976-409.977c33.77-33.882 52.405-78.607 52.066-126.042-.226-46.984-18.974-90.918-52.066-123.219l-30.494-30.494-79.85 79.85 30.946 30.945c11.86 11.633 18.41 27.106 18.523 43.595.113 16.942-6.664 33.092-18.974 45.516l-409.977 409.976c-23.492 23.492-64.94 23.492-88.433 0l-301.553-301.553c-11.746-11.746-18.183-27.444-18.183-44.273 0-16.715 6.437-32.414 18.183-44.16l409.977-409.976c12.197-12.31 28.235-19.087 45.063-19.087h.452c16.49.113 31.962 6.663 43.934 19.087l110.344 110.23-162.184 162.297 79.85 79.85 438.324-438.438 110.796 110.908c34.334 34.221 79.171 51.275 124.122 51.275 44.95 0 89.901-17.054 124.122-51.275l409.977-409.977c67.877-67.99 67.99-179.463 0-249.26" /></svg></div>
+                      <a href='https://learn.mywhitecliffe.com/courses/2488/discussion_topics/16163?entry_id&#x3D;13345' class='link-item__text' target='_blank' rel='noopener noreferrer'>Link to MD Raihan Joy&#x27;s Feedback [Comment]</a>
+                    </div>
+                    <div class='link-item'>
+                      <div class='link-item__icon'><svg viewBox="0 0 1920 1920"><path fill="#000" fill-rule="evenodd" d="M1866.003 351.563 1565.128 50.575c-69.46-67.652-180.932-67.426-248.923.565L906.23 461.116c-68.33 68.443-68.33 179.69.113 248.132l31.623 31.624 79.737-79.963-31.624-31.51c-24.282-24.396-24.282-64.038 0-88.433l409.977-409.977c24.508-24.395 64.828-24.17 89.675 0l299.859 299.972c24.734 25.186 24.847 65.619.564 90.014l-409.976 409.977c-24.508 24.282-64.15 24.282-88.546 0l-110.795-110.909 159.473-159.36-79.85-79.85-435.614 435.502-109.779-109.779c-32.866-33.656-76.8-52.292-123.67-52.63-43.596 1.694-92.273 18.296-126.156 52.178L51.377 1316.081c-68.442 68.442-68.442 179.69 0 248.132l301.553 301.553c34.108 34.108 79.059 51.275 124.01 51.275 44.95 0 89.9-17.167 124.122-51.275l409.976-409.977c33.77-33.882 52.405-78.607 52.066-126.042-.226-46.984-18.974-90.918-52.066-123.219l-30.494-30.494-79.85 79.85 30.946 30.945c11.86 11.633 18.41 27.106 18.523 43.595.113 16.942-6.664 33.092-18.974 45.516l-409.977 409.976c-23.492 23.492-64.94 23.492-88.433 0l-301.553-301.553c-11.746-11.746-18.183-27.444-18.183-44.273 0-16.715 6.437-32.414 18.183-44.16l409.977-409.976c12.197-12.31 28.235-19.087 45.063-19.087h.452c16.49.113 31.962 6.663 43.934 19.087l110.344 110.23-162.184 162.297 79.85 79.85 438.324-438.438 110.796 110.908c34.334 34.221 79.171 51.275 124.122 51.275 44.95 0 89.901-17.054 124.122-51.275l409.977-409.977c67.877-67.99 67.99-179.463 0-249.26" /></svg></div>
+                      <a href='https://learn.mywhitecliffe.com/courses/2488/discussion_topics/16163?entry_id&#x3D;13662' class='link-item__text' target='_blank' rel='noopener noreferrer'>Link to Caleb Lambert&#x27;s Feedback [Comment]</a>
+                    </div>
+                    <div class='link-item'>
+                      <div class='link-item__icon'><svg viewBox="0 0 1920 1920"><path fill="#000" fill-rule="evenodd" d="M1866.003 351.563 1565.128 50.575c-69.46-67.652-180.932-67.426-248.923.565L906.23 461.116c-68.33 68.443-68.33 179.69.113 248.132l31.623 31.624 79.737-79.963-31.624-31.51c-24.282-24.396-24.282-64.038 0-88.433l409.977-409.977c24.508-24.395 64.828-24.17 89.675 0l299.859 299.972c24.734 25.186 24.847 65.619.564 90.014l-409.976 409.977c-24.508 24.282-64.15 24.282-88.546 0l-110.795-110.909 159.473-159.36-79.85-79.85-435.614 435.502-109.779-109.779c-32.866-33.656-76.8-52.292-123.67-52.63-43.596 1.694-92.273 18.296-126.156 52.178L51.377 1316.081c-68.442 68.442-68.442 179.69 0 248.132l301.553 301.553c34.108 34.108 79.059 51.275 124.01 51.275 44.95 0 89.9-17.167 124.122-51.275l409.976-409.977c33.77-33.882 52.405-78.607 52.066-126.042-.226-46.984-18.974-90.918-52.066-123.219l-30.494-30.494-79.85 79.85 30.946 30.945c11.86 11.633 18.41 27.106 18.523 43.595.113 16.942-6.664 33.092-18.974 45.516l-409.977 409.976c-23.492 23.492-64.94 23.492-88.433 0l-301.553-301.553c-11.746-11.746-18.183-27.444-18.183-44.273 0-16.715 6.437-32.414 18.183-44.16l409.977-409.976c12.197-12.31 28.235-19.087 45.063-19.087h.452c16.49.113 31.962 6.663 43.934 19.087l110.344 110.23-162.184 162.297 79.85 79.85 438.324-438.438 110.796 110.908c34.334 34.221 79.171 51.275 124.122 51.275 44.95 0 89.901-17.054 124.122-51.275l409.977-409.977c67.877-67.99 67.99-179.463 0-249.26" /></svg></div>
+                      <a href='https://learn.mywhitecliffe.com/courses/2488/discussion_topics/16163?entry_id&#x3D;13309' class='link-item__text' target='_blank' rel='noopener noreferrer'>Link to my Original Reflection [Post - Unaltered]</a>
+                    </div>
+                </div>    </div>
+          </div>
+
+      </div>
+      <div class="content-tray">
+        <div class='card-info'>
+          <div class='card-header'>
+            <div class='card-header__content'>
+                  <div class='badge-text--green'>Extracurricular activity</div>
+                    </div>
+          </div>
+            <div class='card-header'>
+              <div class='card-title--flex'>TS7501 Finding my Way - S1 2026 - Week 7 | Activity - [Session II]</div>
+            </div>
+            <div class='timestamp'>Date created: 05/20/2026</div>
+        </div>
+          <div class="tags-container">
+              <div class="tag-tag">
+                <span class="tag-tag__text">Responsible  AI Use</span>
+              </div>
+              <div class="tag-tag">
+                <span class="tag-tag__text">Reflective Practicing</span>
+              </div>
+              <div class="tag-tag">
+                <span class="tag-tag__text">Data Informed Decision Making</span>
+              </div>
+          </div>
+
+        <div class='content-panel--green'>
+          <div class='panel-label'>Description</div>
+          <div class='text--panel'><pre><span style="font-size: 18pt;"><strong><i>Original Description - Discussion Board:</i></strong></span></pre>
+        <p><span>In this session, we explored&nbsp; the responsible and ethical use of AI through a scenario where an AI agent refused to answer a students prompt. we were asked who would be responsible if the user managed to jailbreak the AI into responding to a malicious request. As part of the session I also conducted my own experiment by sending the same prompt three times to two different AI models and comparing their responses. The models used were ChatGPT and Microsoft Co-pilot to observe how differently the two AI tools could respond to the same question.</span></p>
+        <hr>
+        <pre><span style="font-size: 18pt;"><strong><i>Updated Description - Portfolio:</i></strong></span></pre>
+        <p><span style="font-size: 12pt;">In this session we explored the responsible and ethical use of AI through a scenario where an AI agent refused to answer a students prompt, raising the question of who carries the responsibility if a user manages to jailbreak the AI into responding a malicious request regardless of the level of intensity of the request. As part of the activity I conducted my own experiment by sending the exact same prompt three times to two different AI models, ChatGPT &amp; Microsoft Co-Pilot to observe how each model handled identical input. The prompt was a practical one asking how to install Rogue Squadron II on the dolphin emulator at minimum settings, a real task&nbsp; relevant to running a GameCube title on PC.</span></p>
+        <p><span><span style="font-size: 24pt;"><strong><i></i></strong></span></span></p></div>
+        </div>
+          <div class='content-panel--green'>
+            <div class='panel-label'>Reflection</div>
+            <div class='text--panel'><pre><span style="font-size: 18pt;"><strong><i>Original Reflection - Discussion Board:</i></strong></span></pre>
+          <pre><span style="font-size: 18pt;"><strong><i></i></strong></span></pre>
+          <p><strong><i>Analysis:</i></strong></p>
+          <p><span style="font-weight: 400;">Comparing the 6 different results between ChatGPT and Microsoft co-pilot was quite an interesting experience both models answered the question that would be considered as helpful however I noted that Microsoft Co-pilot often gives a far more detailed response often used dividers and bullet pointed lists while ChatGPT has the same formatting but is often less detailed. This has shown me that while some AI models can get the job done they can often leave out perhaps important details that can affect the process of the task that needs to be accomplished.</span></p>
+          <p><strong><i>Insight:</i></strong></p>
+          <p><span style="font-weight: 400;">This session has shown me that some AI models often do not actually think about the question being asked. The first answer it finds is what's considered as the result and on our end as humans, the truth is often what we make of it but saying it doesn't make it so even if it's said by AI.</span></p>
+          <p><strong><i>Future Action:</i></strong></p>
+          <p><span style="font-weight: 400;">In the future I will consider how I approach AI with my choice of wording and how I want the AI to respond instead of just going in with a help me question.</span></p>
+          <p><span style="font-weight: 400;">AI Prompt used: [how can I install rogue squadron II for the dolphin emulator? I would like to have it on minimum settings for now]</span></p>
+          <p><span style="font-weight: 400;">Rogue Leader is a star wars starfighter based simulation game that is primarily based on the GameCube console however it can </span><span style="font-weight: 400;">be emulated on PC with a software called dolphin emulator.</span></p>
+          <p><em><strong>Gameplay Footage:</strong></em></p>
+          <p><span style="font-weight: 400;"><video style="max-width: 100%; width: 642px; height: 358px;" aria-label="Star Wars Rogue Squadron II: Rogue Leader - Razor Rendezvous" controls="controls" width="642" height="358" playsinline=""><source src="https://prod-au-syd-media-public.portfolio.instructure.com/public-9b5a0c1c-a227-447d-823f-04d2d5acb01d" type="video/mp4"></video></span></p>
+          <hr>
+          <pre><span style="font-size: 18pt;"><strong><i>Original Reflection - Peer Feedback:</i></strong></span></pre>
+          <p><span style="text-decoration: underline; font-size: 14pt;"><span style="color: #e62429; text-decoration: underline;"><strong><i>Aliaa Farag:</i></strong></span></span></p>
+          <p><em><span style="font-weight: 400; font-size: 10pt;">Your reflection is really well written and shows a good understanding of responsible AI use. <strong>I like how you explored the idea that AI tools can respond differently even when they are given the same prompt. Your comparison between ChatGPT and Microsoft Co-pilot was a strong point, because it clearly showed how each model can vary in detail, structure, and depth. It helps show that AI is not always consistent, and the way information is presented can affect how useful it is for a task.</strong> </span></em></p>
+          <p><em><span style="font-weight: 400; font-size: 10pt;">Your discussion about responsibility was also very important. <strong>The idea of “jailbreaking” AI raises real ethical questions, and it’s good that you consider who should be responsible when AI is misused. This shows that you are thinking beyond just getting answers and looking at the bigger picture of how AI should be used properly.</strong> </span></em></p>
+          <p><em><span style="font-weight: 400; font-size: 10pt;"><strong>I also agree with your insight that AI does not truly think. It generates responses based on patterns, so users still need to judge the quality and accuracy of the answer instead of trusting it blindly.</strong> Overall, this is a thoughtful reflection, and your future action is practical and useful for improving how you interact with AI. I liked the video 👍</span></em></p>
+          <p><span style="text-decoration: underline; font-size: 14pt;"><span style="color: #e62429; text-decoration: underline;"><strong><i>Shatha Abid Ali:</i></strong></span></span></p>
+          <p><em><span style="font-weight: 400; font-size: 10pt;"><strong>Your reflection shows strong analysis and comparison skills, especially in how you tested two AI tools and compared six different responses. A standout strength is your ability to notice differences in detail and structure, which I agree with you particularly how Microsoft Co-pilot provided more detailed, formatted answers while ChatGPT was less detailed.</strong> This shows good attention to detail and evaluation skills that are useful in research and learning. </span></em></p>
+          <p><strong><em><span style="font-size: 10pt;">For further development, you could strengthen your reflection by explaining how you would decide which AI response is more reliable or useful. Adding this step would show deeper critical thinking and help you apply these skills more effectively in academic tasks and real-world situations.</span></em></strong></p>
+          <hr>
+          <pre><span style="font-size: 18pt;"><strong><i>Updated Reflection - Portfolio:</i></strong></span></pre>
+          <p><strong><i>Analysis - Updated:</i></strong></p>
+          <p><span style="font-weight: 400;">Throughout week one I reinforced my understanding that climate change while carrying the potential to be an environmental issue but in our case is a systematic one, shaped by the overlapping influence of industrial production, greenhouse gas emissions and more. Because these causes are so intertwined no single policy or action will resolve the issue in isolation. What became clearer through the discussion was that this is ultimately a reflection of collective failure in foresight.</span></p>
+          <ul>
+          <li><span style="font-weight: 400; font-family: OpenDyslexicMono, Monaco, Menlo, Consolas, 'Courier New', monospace;">Analysis - [Group Element - Feedback Based: Aliaa Farag]</span></li>
+          </ul>
+          <p><span style="font-weight: 400;">Aliaa highlighted that my comparison between ChatGPT and Microsoft co-pilot was a strong point because it clearly demonstrated how AI tools are not consistent, and that variation in detail and structure directly imp[acts how useful the response actually is, she also responded positively to the jail breaking discussion, noting that I was thinking beyond retrieving answers and considering the broader ethical picture of how AI should be used responsibly. This feedback reinforced my view that testing AI across multiple models rather than relying on a single model is a more reliable approach particularly when the task carries any level of importance or consequence.</span></p>
+          <ul>
+          <li><span style="font-weight: 400; font-family: OpenDyslexicMono, Monaco, Menlo, Consolas, 'Courier New', monospace;">Analysis - [Group Element - Feedback Based: Shatha Abid Ali]</span></li>
+          </ul>
+          <p><span style="font-weight: 400;">Shatha acknowledged the strength in testing and comparing six separate responses and agreed with my observation about how co-pilot proved a more structured and detailed response than ChatGPT did. However she also raised an excellent point that I had not addressed in my original reflection, which was how I would actually decide which response was more useful or reliable when two models give different answers to the same question. This was a gap in my thinking having two different responses do not automatically tell you which one to trust</span></p>
+          <p><strong><i>Insight - Updated:</i></strong></p>
+          <p><span style="font-weight: 400;">This session reinforced that&nbsp; AI models do not truly process or reason through a question. They generate responses based on learned patterns from the user which means the first answer produced is not necessarily the most accurate or complete one. As both Aliaa and Shatha's feedback highlighted, users carry the responsibility of judging the quality and reliability of what an AI model produces rather than accepting it. I came to this conclusion based on the fact that when given a basic prompt the difference between the outputs is noticeably different where one is more accurate than the other.</span></p>
+          <p><strong><i>Future Action - Updated:</i></strong></p>
+          <p><span style="font-weight: 400;">Moving forward I will approach AI tools with a more structured evaluation method rather than stopping at receiving a response. This means not only considering how I word my prompts as I noted in my original reflection but also cross referencing AI output against reliable sources before acting on it. Where two models produce different responses I will use that difference as a prompt to investigate further rather than defaulting to the more detailed answer.&nbsp;</span></p>
+          <p><br><br><br></p></div>
+          </div>
+          <div class='content-panel--green'>
+            <div class='panel-title'>Attachments</div>
+            <div class='attachments-groups'>
+                <div class='file-list'>
+                  <div class='panel-label--dark'>Added files</div>
+                    <div class='file-item'>
+                      <div class='file-item__content'>
+                        <div class='file-item__icon'><svg style="width: 30px; height: 30px;" viewBox="0 0 1920 1920"><path fill="#2D3B45" fill-rule="evenodd" d="M1920 113v1694.118H0V113h1920Zm-112.941 112.941H112.94V1694.29h1694.12V225.941ZM935.944 1058.77c182.851-258.409 332.498-286.87 426.691-264.847 160.716 37.384 272.076 242.26 330.805 608.98l10.504 65.392H207.924l20.104-71.718c85.384-306.07 172.913-457.072 283.37-489.712 102.55-30.156 185.336 43.82 258.86 109.1 43.596 38.514 90.806 81.092 122.542 78.834 15.925-1.807 32.188-20.556 43.144-36.029Zm401.167-154.842c-83.012-19.313-196.066 60.762-308.895 220.01-35.237 49.807-76.348 77.816-122.315 83.124-76.226 9.024-138.182-42.827-198.812-96.266l-3.868-3.413c-2.578-2.276-5.154-4.552-7.73-6.824-54.211-48.113-110.682-97.017-152.018-85.384-34.447 10.165-102.325 69.12-185.788 340.179h1212.762c-50.485-265.186-134.4-428.386-233.336-451.426ZM677.647 338.882c124.574 0 225.882 101.309 225.882 225.883 0 124.574-101.308 225.882-225.882 225.882S451.765 689.34 451.765 564.765s101.308-225.883 225.882-225.883Zm0 112.942c-62.343 0-112.941 50.71-112.941 112.94 0 62.231 50.598 112.942 112.941 112.942 62.344 0 112.941-50.71 112.941-112.941 0-62.23-50.597-112.941-112.94-112.941Z" /></svg></div>
+                        <div class='file-item__info'>
+                          <span class='file-item__name'>AI Response I.png</span>
+                          <div class='card-header__content'>
+                            <div class='file-item__type'>Image</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='file-item'>
+                      <div class='file-item__content'>
+                        <div class='file-item__icon'><svg style="width: 30px; height: 30px;" viewBox="0 0 1920 1920"><path fill="#2D3B45" fill-rule="evenodd" d="M1920 113v1694.118H0V113h1920Zm-112.941 112.941H112.94V1694.29h1694.12V225.941ZM935.944 1058.77c182.851-258.409 332.498-286.87 426.691-264.847 160.716 37.384 272.076 242.26 330.805 608.98l10.504 65.392H207.924l20.104-71.718c85.384-306.07 172.913-457.072 283.37-489.712 102.55-30.156 185.336 43.82 258.86 109.1 43.596 38.514 90.806 81.092 122.542 78.834 15.925-1.807 32.188-20.556 43.144-36.029Zm401.167-154.842c-83.012-19.313-196.066 60.762-308.895 220.01-35.237 49.807-76.348 77.816-122.315 83.124-76.226 9.024-138.182-42.827-198.812-96.266l-3.868-3.413c-2.578-2.276-5.154-4.552-7.73-6.824-54.211-48.113-110.682-97.017-152.018-85.384-34.447 10.165-102.325 69.12-185.788 340.179h1212.762c-50.485-265.186-134.4-428.386-233.336-451.426ZM677.647 338.882c124.574 0 225.882 101.309 225.882 225.883 0 124.574-101.308 225.882-225.882 225.882S451.765 689.34 451.765 564.765s101.308-225.883 225.882-225.883Zm0 112.942c-62.343 0-112.941 50.71-112.941 112.94 0 62.231 50.598 112.942 112.941 112.942 62.344 0 112.941-50.71 112.941-112.941 0-62.23-50.597-112.941-112.94-112.941Z" /></svg></div>
+                        <div class='file-item__info'>
+                          <span class='file-item__name'>AI Response II - Copilot.png</span>
+                          <div class='card-header__content'>
+                            <div class='file-item__type'>Image</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='file-item'>
+                      <div class='file-item__content'>
+                        <div class='file-item__icon'><svg style="width: 30px; height: 30px;" viewBox="0 0 1920 1920"><path fill="#2D3B45" fill-rule="evenodd" d="M1920 113v1694.118H0V113h1920Zm-112.941 112.941H112.94V1694.29h1694.12V225.941ZM935.944 1058.77c182.851-258.409 332.498-286.87 426.691-264.847 160.716 37.384 272.076 242.26 330.805 608.98l10.504 65.392H207.924l20.104-71.718c85.384-306.07 172.913-457.072 283.37-489.712 102.55-30.156 185.336 43.82 258.86 109.1 43.596 38.514 90.806 81.092 122.542 78.834 15.925-1.807 32.188-20.556 43.144-36.029Zm401.167-154.842c-83.012-19.313-196.066 60.762-308.895 220.01-35.237 49.807-76.348 77.816-122.315 83.124-76.226 9.024-138.182-42.827-198.812-96.266l-3.868-3.413c-2.578-2.276-5.154-4.552-7.73-6.824-54.211-48.113-110.682-97.017-152.018-85.384-34.447 10.165-102.325 69.12-185.788 340.179h1212.762c-50.485-265.186-134.4-428.386-233.336-451.426ZM677.647 338.882c124.574 0 225.882 101.309 225.882 225.883 0 124.574-101.308 225.882-225.882 225.882S451.765 689.34 451.765 564.765s101.308-225.883 225.882-225.883Zm0 112.942c-62.343 0-112.941 50.71-112.941 112.94 0 62.231 50.598 112.942 112.941 112.942 62.344 0 112.941-50.71 112.941-112.941 0-62.23-50.597-112.941-112.94-112.941Z" /></svg></div>
+                        <div class='file-item__info'>
+                          <span class='file-item__name'>AI Response I - Copilot.png</span>
+                          <div class='card-header__content'>
+                            <div class='file-item__type'>Image</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='file-item'>
+                      <div class='file-item__content'>
+                        <div class='file-item__icon'><svg style="width: 30px; height: 30px;" viewBox="0 0 1920 1920"><path fill="#2D3B45" fill-rule="evenodd" d="M1920 113v1694.118H0V113h1920Zm-112.941 112.941H112.94V1694.29h1694.12V225.941ZM935.944 1058.77c182.851-258.409 332.498-286.87 426.691-264.847 160.716 37.384 272.076 242.26 330.805 608.98l10.504 65.392H207.924l20.104-71.718c85.384-306.07 172.913-457.072 283.37-489.712 102.55-30.156 185.336 43.82 258.86 109.1 43.596 38.514 90.806 81.092 122.542 78.834 15.925-1.807 32.188-20.556 43.144-36.029Zm401.167-154.842c-83.012-19.313-196.066 60.762-308.895 220.01-35.237 49.807-76.348 77.816-122.315 83.124-76.226 9.024-138.182-42.827-198.812-96.266l-3.868-3.413c-2.578-2.276-5.154-4.552-7.73-6.824-54.211-48.113-110.682-97.017-152.018-85.384-34.447 10.165-102.325 69.12-185.788 340.179h1212.762c-50.485-265.186-134.4-428.386-233.336-451.426ZM677.647 338.882c124.574 0 225.882 101.309 225.882 225.883 0 124.574-101.308 225.882-225.882 225.882S451.765 689.34 451.765 564.765s101.308-225.883 225.882-225.883Zm0 112.942c-62.343 0-112.941 50.71-112.941 112.94 0 62.231 50.598 112.942 112.941 112.942 62.344 0 112.941-50.71 112.941-112.941 0-62.23-50.597-112.941-112.94-112.941Z" /></svg></div>
+                        <div class='file-item__info'>
+                          <span class='file-item__name'>AI Response III.png</span>
+                          <div class='card-header__content'>
+                            <div class='file-item__type'>Image</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='file-item'>
+                      <div class='file-item__content'>
+                        <div class='file-item__icon'><svg style="width: 30px; height: 30px;" viewBox="0 0 1920 1920"><path fill="#2D3B45" fill-rule="evenodd" d="M1920 113v1694.118H0V113h1920Zm-112.941 112.941H112.94V1694.29h1694.12V225.941ZM935.944 1058.77c182.851-258.409 332.498-286.87 426.691-264.847 160.716 37.384 272.076 242.26 330.805 608.98l10.504 65.392H207.924l20.104-71.718c85.384-306.07 172.913-457.072 283.37-489.712 102.55-30.156 185.336 43.82 258.86 109.1 43.596 38.514 90.806 81.092 122.542 78.834 15.925-1.807 32.188-20.556 43.144-36.029Zm401.167-154.842c-83.012-19.313-196.066 60.762-308.895 220.01-35.237 49.807-76.348 77.816-122.315 83.124-76.226 9.024-138.182-42.827-198.812-96.266l-3.868-3.413c-2.578-2.276-5.154-4.552-7.73-6.824-54.211-48.113-110.682-97.017-152.018-85.384-34.447 10.165-102.325 69.12-185.788 340.179h1212.762c-50.485-265.186-134.4-428.386-233.336-451.426ZM677.647 338.882c124.574 0 225.882 101.309 225.882 225.883 0 124.574-101.308 225.882-225.882 225.882S451.765 689.34 451.765 564.765s101.308-225.883 225.882-225.883Zm0 112.942c-62.343 0-112.941 50.71-112.941 112.94 0 62.231 50.598 112.942 112.941 112.942 62.344 0 112.941-50.71 112.941-112.941 0-62.23-50.597-112.941-112.94-112.941Z" /></svg></div>
+                        <div class='file-item__info'>
+                          <span class='file-item__name'>AI Response II.png</span>
+                          <div class='card-header__content'>
+                            <div class='file-item__type'>Image</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='file-item'>
+                      <div class='file-item__content'>
+                        <div class='file-item__icon'><svg style="width: 30px; height: 30px;" viewBox="0 0 1920 1920"><path fill="#2D3B45" fill-rule="evenodd" d="M1920 113v1694.118H0V113h1920Zm-112.941 112.941H112.94V1694.29h1694.12V225.941ZM935.944 1058.77c182.851-258.409 332.498-286.87 426.691-264.847 160.716 37.384 272.076 242.26 330.805 608.98l10.504 65.392H207.924l20.104-71.718c85.384-306.07 172.913-457.072 283.37-489.712 102.55-30.156 185.336 43.82 258.86 109.1 43.596 38.514 90.806 81.092 122.542 78.834 15.925-1.807 32.188-20.556 43.144-36.029Zm401.167-154.842c-83.012-19.313-196.066 60.762-308.895 220.01-35.237 49.807-76.348 77.816-122.315 83.124-76.226 9.024-138.182-42.827-198.812-96.266l-3.868-3.413c-2.578-2.276-5.154-4.552-7.73-6.824-54.211-48.113-110.682-97.017-152.018-85.384-34.447 10.165-102.325 69.12-185.788 340.179h1212.762c-50.485-265.186-134.4-428.386-233.336-451.426ZM677.647 338.882c124.574 0 225.882 101.309 225.882 225.883 0 124.574-101.308 225.882-225.882 225.882S451.765 689.34 451.765 564.765s101.308-225.883 225.882-225.883Zm0 112.942c-62.343 0-112.941 50.71-112.941 112.94 0 62.231 50.598 112.942 112.941 112.942 62.344 0 112.941-50.71 112.941-112.941 0-62.23-50.597-112.941-112.94-112.941Z" /></svg></div>
+                        <div class='file-item__info'>
+                          <span class='file-item__name'>AI Response III - Copilot.png</span>
+                          <div class='card-header__content'>
+                            <div class='file-item__type'>Image</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>        <div class='links-container'>
+                  <div class='panel-label--dark'>Links</div>
+                    <div class='link-item'>
+                      <div class='link-item__icon'><svg viewBox="0 0 1920 1920"><path fill="#000" fill-rule="evenodd" d="M1866.003 351.563 1565.128 50.575c-69.46-67.652-180.932-67.426-248.923.565L906.23 461.116c-68.33 68.443-68.33 179.69.113 248.132l31.623 31.624 79.737-79.963-31.624-31.51c-24.282-24.396-24.282-64.038 0-88.433l409.977-409.977c24.508-24.395 64.828-24.17 89.675 0l299.859 299.972c24.734 25.186 24.847 65.619.564 90.014l-409.976 409.977c-24.508 24.282-64.15 24.282-88.546 0l-110.795-110.909 159.473-159.36-79.85-79.85-435.614 435.502-109.779-109.779c-32.866-33.656-76.8-52.292-123.67-52.63-43.596 1.694-92.273 18.296-126.156 52.178L51.377 1316.081c-68.442 68.442-68.442 179.69 0 248.132l301.553 301.553c34.108 34.108 79.059 51.275 124.01 51.275 44.95 0 89.9-17.167 124.122-51.275l409.976-409.977c33.77-33.882 52.405-78.607 52.066-126.042-.226-46.984-18.974-90.918-52.066-123.219l-30.494-30.494-79.85 79.85 30.946 30.945c11.86 11.633 18.41 27.106 18.523 43.595.113 16.942-6.664 33.092-18.974 45.516l-409.977 409.976c-23.492 23.492-64.94 23.492-88.433 0l-301.553-301.553c-11.746-11.746-18.183-27.444-18.183-44.273 0-16.715 6.437-32.414 18.183-44.16l409.977-409.976c12.197-12.31 28.235-19.087 45.063-19.087h.452c16.49.113 31.962 6.663 43.934 19.087l110.344 110.23-162.184 162.297 79.85 79.85 438.324-438.438 110.796 110.908c34.334 34.221 79.171 51.275 124.122 51.275 44.95 0 89.901-17.054 124.122-51.275l409.977-409.977c67.877-67.99 67.99-179.463 0-249.26" /></svg></div>
+                      <a href='https://learn.mywhitecliffe.com/courses/2488/discussion_topics/16659?entry_id&#x3D;14517' class='link-item__text' target='_blank' rel='noopener noreferrer'>Link to my Original Reflection [Post - Unaltered]</a>
+                    </div>
+                    <div class='link-item'>
+                      <div class='link-item__icon'><svg viewBox="0 0 1920 1920"><path fill="#000" fill-rule="evenodd" d="M1866.003 351.563 1565.128 50.575c-69.46-67.652-180.932-67.426-248.923.565L906.23 461.116c-68.33 68.443-68.33 179.69.113 248.132l31.623 31.624 79.737-79.963-31.624-31.51c-24.282-24.396-24.282-64.038 0-88.433l409.977-409.977c24.508-24.395 64.828-24.17 89.675 0l299.859 299.972c24.734 25.186 24.847 65.619.564 90.014l-409.976 409.977c-24.508 24.282-64.15 24.282-88.546 0l-110.795-110.909 159.473-159.36-79.85-79.85-435.614 435.502-109.779-109.779c-32.866-33.656-76.8-52.292-123.67-52.63-43.596 1.694-92.273 18.296-126.156 52.178L51.377 1316.081c-68.442 68.442-68.442 179.69 0 248.132l301.553 301.553c34.108 34.108 79.059 51.275 124.01 51.275 44.95 0 89.9-17.167 124.122-51.275l409.976-409.977c33.77-33.882 52.405-78.607 52.066-126.042-.226-46.984-18.974-90.918-52.066-123.219l-30.494-30.494-79.85 79.85 30.946 30.945c11.86 11.633 18.41 27.106 18.523 43.595.113 16.942-6.664 33.092-18.974 45.516l-409.977 409.976c-23.492 23.492-64.94 23.492-88.433 0l-301.553-301.553c-11.746-11.746-18.183-27.444-18.183-44.273 0-16.715 6.437-32.414 18.183-44.16l409.977-409.976c12.197-12.31 28.235-19.087 45.063-19.087h.452c16.49.113 31.962 6.663 43.934 19.087l110.344 110.23-162.184 162.297 79.85 79.85 438.324-438.438 110.796 110.908c34.334 34.221 79.171 51.275 124.122 51.275 44.95 0 89.901-17.054 124.122-51.275l409.977-409.977c67.877-67.99 67.99-179.463 0-249.26" /></svg></div>
+                      <a href='https://learn.mywhitecliffe.com/courses/2488/discussion_topics/16659?entry_id&#x3D;14780' class='link-item__text' target='_blank' rel='noopener noreferrer'>Link to Aliaa Farag&#x27;s Feedback [Comment]</a>
+                    </div>
+                    <div class='link-item'>
+                      <div class='link-item__icon'><svg viewBox="0 0 1920 1920"><path fill="#000" fill-rule="evenodd" d="M1866.003 351.563 1565.128 50.575c-69.46-67.652-180.932-67.426-248.923.565L906.23 461.116c-68.33 68.443-68.33 179.69.113 248.132l31.623 31.624 79.737-79.963-31.624-31.51c-24.282-24.396-24.282-64.038 0-88.433l409.977-409.977c24.508-24.395 64.828-24.17 89.675 0l299.859 299.972c24.734 25.186 24.847 65.619.564 90.014l-409.976 409.977c-24.508 24.282-64.15 24.282-88.546 0l-110.795-110.909 159.473-159.36-79.85-79.85-435.614 435.502-109.779-109.779c-32.866-33.656-76.8-52.292-123.67-52.63-43.596 1.694-92.273 18.296-126.156 52.178L51.377 1316.081c-68.442 68.442-68.442 179.69 0 248.132l301.553 301.553c34.108 34.108 79.059 51.275 124.01 51.275 44.95 0 89.9-17.167 124.122-51.275l409.976-409.977c33.77-33.882 52.405-78.607 52.066-126.042-.226-46.984-18.974-90.918-52.066-123.219l-30.494-30.494-79.85 79.85 30.946 30.945c11.86 11.633 18.41 27.106 18.523 43.595.113 16.942-6.664 33.092-18.974 45.516l-409.977 409.976c-23.492 23.492-64.94 23.492-88.433 0l-301.553-301.553c-11.746-11.746-18.183-27.444-18.183-44.273 0-16.715 6.437-32.414 18.183-44.16l409.977-409.976c12.197-12.31 28.235-19.087 45.063-19.087h.452c16.49.113 31.962 6.663 43.934 19.087l110.344 110.23-162.184 162.297 79.85 79.85 438.324-438.438 110.796 110.908c34.334 34.221 79.171 51.275 124.122 51.275 44.95 0 89.901-17.054 124.122-51.275l409.977-409.977c67.877-67.99 67.99-179.463 0-249.26" /></svg></div>
+                      <a href='https://learn.mywhitecliffe.com/courses/2488/discussion_topics/16659?entry_id&#x3D;14787' class='link-item__text' target='_blank' rel='noopener noreferrer'>Link to Shatha Abid Ali&#x27;s Feedback [Comment]</a>
+                    </div>
+                    <div class='link-item'>
+                      <div class='link-item__icon'><svg viewBox="0 0 1920 1920"><path fill="#000" fill-rule="evenodd" d="M1866.003 351.563 1565.128 50.575c-69.46-67.652-180.932-67.426-248.923.565L906.23 461.116c-68.33 68.443-68.33 179.69.113 248.132l31.623 31.624 79.737-79.963-31.624-31.51c-24.282-24.396-24.282-64.038 0-88.433l409.977-409.977c24.508-24.395 64.828-24.17 89.675 0l299.859 299.972c24.734 25.186 24.847 65.619.564 90.014l-409.976 409.977c-24.508 24.282-64.15 24.282-88.546 0l-110.795-110.909 159.473-159.36-79.85-79.85-435.614 435.502-109.779-109.779c-32.866-33.656-76.8-52.292-123.67-52.63-43.596 1.694-92.273 18.296-126.156 52.178L51.377 1316.081c-68.442 68.442-68.442 179.69 0 248.132l301.553 301.553c34.108 34.108 79.059 51.275 124.01 51.275 44.95 0 89.9-17.167 124.122-51.275l409.976-409.977c33.77-33.882 52.405-78.607 52.066-126.042-.226-46.984-18.974-90.918-52.066-123.219l-30.494-30.494-79.85 79.85 30.946 30.945c11.86 11.633 18.41 27.106 18.523 43.595.113 16.942-6.664 33.092-18.974 45.516l-409.977 409.976c-23.492 23.492-64.94 23.492-88.433 0l-301.553-301.553c-11.746-11.746-18.183-27.444-18.183-44.273 0-16.715 6.437-32.414 18.183-44.16l409.977-409.976c12.197-12.31 28.235-19.087 45.063-19.087h.452c16.49.113 31.962 6.663 43.934 19.087l110.344 110.23-162.184 162.297 79.85 79.85 438.324-438.438 110.796 110.908c34.334 34.221 79.171 51.275 124.122 51.275 44.95 0 89.901-17.054 124.122-51.275l409.977-409.977c67.877-67.99 67.99-179.463 0-249.26" /></svg></div>
+                      <a href='https://youtu.be/O8Em_zQ4_o4' class='link-item__text' target='_blank' rel='noopener noreferrer'>Link to YouTube Video [Used in Reflection for an Example]</a>
+                    </div>
+                </div>    </div>
+          </div>
+
+      </div>
+    <div class="heading--module">Past Assignments - Whitecliffe</div>
+      <div class="content-tray">
+        <div class='card-info'>
+          <div class='card-header'>
+            <div class='card-header__content'>
+                  <div class='badge-text--blue'>Project</div>
+            </div>
+          </div>
+            <div class='card-header'>
+              <div class='card-title--flex'>BACT7507 Project - S1 2026 - {Assignment} - [Project Proposal]</div>
+            </div>
+            <div class='timestamp'>Date created: 05/20/2026</div>
+        </div>
+          <div class="tags-container">
+              <div class="tag-tag">
+                <span class="tag-tag__text">Collaborative Learning</span>
+              </div>
+              <div class="tag-tag">
+                <span class="tag-tag__text">Time Management</span>
+              </div>
+              <div class="tag-tag">
+                <span class="tag-tag__text">Problem Solving &amp; Critical Thinking</span>
+              </div>
+          </div>
+
+        <div class='content-panel--blue'>
+          <div class='panel-label'>Description</div>
+          <div class='text--panel'><pre><span style="font-size: 18pt;"><strong><i>Reflection Inspired Description:</i></strong></span></pre>
+        <p>For this evidence the skills being learnt here come from a past assignment where I had to come up with a project idea alongside a fellow classmate for a group project. This demonstrated that we had to work together in researching for a good project idea [Specifically a website Project] This demonstrated that we had to split tasks and communicate collaboratively to ensure that the proposal could be submitted on time.</p>
+        <p>This research project challenged our skills to communicate effectively and work together as a team to demonstrate competency in teamwork to make an effective project.</p>
+        <ul style="list-style-type: square;">
+        <li><code><span style="font-family: OpenDyslexicMono, Monaco, Menlo, Consolas, 'Courier New', monospace;">Description - [Finding my Way: Element - Reflection </span><span style="font-family: OpenDyslexicMono, Monaco, Menlo, Consolas, 'Courier New', monospace;">Based] {</span></code></li>
+        </ul>
+        <p style="padding-left: 40px;"><span style="font-family: 'Lato Extended', 'Helvetica Neue', Helvetica, Arial, sans-serif;"><span style="font-size: 10pt;">In a project assessment such as this the task given was a project proposal where myself and a group member had to propose an idea for a project and figure out all the details that this project would need. To accomplish this&nbsp; both team members would need proper communication skills as well as time management to complete the work on time. This would allow us to build a document to propose a project idea to a superior in our case we chose to implement an improved version of - {Electronic Arts Updated Support System}</span></span></p>
+        <p><code><span style="font-family: OpenDyslexicMono, Monaco, Menlo, Consolas, 'Courier New', monospace;">}</span></code></p></div>
+        </div>
+          <div class='content-panel--blue'>
+            <div class='panel-label'>Reflection</div>
+            <div class='text--panel'><pre><strong><i><span style="font-size: 18pt;">Reflection Inspired by TS7501 Finding my Way:</span></i></strong></pre>
+          <p><strong><i>Analysis:</i></strong></p>
+          <p>My analysis of this assignment while demonstrating these skills can be challenging at times while deciding on a project type because a classmate can possess different skills or qualities which can potentially conflict with the time management process if we argue over what needs to be done.</p>
+          <ul style="list-style-type: square;">
+          <li><code><span style="font-family: OpenDyslexicMono, Monaco, Menlo, Consolas, 'Courier New', monospace;">Analysis - [Finding my Way: Element - Reflection </span><span style="font-family: OpenDyslexicMono, Monaco, Menlo, Consolas, 'Courier New', monospace;">Based] {</span></code></li>
+          </ul>
+          <p style="padding-left: 40px;"><span style="font-family: 'Lato Extended', 'Helvetica Neue', Helvetica, Arial, sans-serif;"><span style="font-size: 10pt;">A second look at this assignment during its implementation would reveal that often splitting the work between two group members can decrease the workload and timeframe but often can cause a loss of project quality due to conflicts about certain elements. Some of these elements can include design choices or role distribution which is why a project plan even for the proposal may not seem critical at first but it very much is which can prove the difference between a successful project and a failure.</span></span></p>
+          <p><code><span style="font-family: OpenDyslexicMono, Monaco, Menlo, Consolas, 'Courier New', monospace;">}</span></code></p>
+          <hr>
+          <p><strong><i>Insight:</i></strong></p>
+          <p>My insight to this assignment it did prove to be difficult at times when splitting tasks between classmates or struggling with a specific design choice for the project how this was overcome was by comminating with my teammate to gather more than one perspective on how the choice I made could potentially be flawed that I was unable to foresee.</p>
+          <ul style="list-style-type: square;">
+          <li><code><span style="font-family: OpenDyslexicMono, Monaco, Menlo, Consolas, 'Courier New', monospace;">Insight - [Finding my Way: Element - Reflection Based] {</span></code></li>
+          </ul>
+          <p style="padding-left: 40px;"><span style="font-family: Lato Extended, Helvetica Neue, Helvetica, Arial, sans-serif;"><span style="font-size: 13.3333px;">An extra insight to my given analysis proved my point that in the aftermath of the project proposal an unclear project plan can prove to be a vulnerability which can affect the rest of the project if not handled with the utmost care. Instead of walking into a project blindly assuming everything will be fine both group members should clearly define and split the workload evenly as well as discuss a clear design choice before proceeding to reduce the chances of any conflict arising.</span></span></p>
+          <p><code><span style="font-family: OpenDyslexicMono, Monaco, Menlo, Consolas, 'Courier New', monospace;">}</span></code></p>
+          <hr>
+          <p><strong><i>Future Action:</i></strong></p>
+          <p><span>In the future <strong>I will consider how I approach a collaborative project</strong> by communicating more with peers before making a choice on a specific design or approach hopefully this well assist in developing my transferrable skills in the future</span></p>
+          <ul style="list-style-type: square;">
+          <li><code><span style="font-family: OpenDyslexicMono, Monaco, Menlo, Consolas, 'Courier New', monospace;">Future Action - [Finding my Way: Element - Reflection Based] {</span></code></li>
+          </ul>
+          <p style="padding-left: 40px;"><span style="font-family: Lato Extended, Helvetica Neue, Helvetica, Arial, sans-serif;"><span style="font-size: 13.3333px;">For an optional future action as well as considering how to approach a collaborative project i will also prepare with a list of things that have to be discussed before going into planning what to do for the project perhaps a template could prove to be a valuable asset when designing a document for the projects assets [Technologies, Prototypes, features etc.] I believe this will prove to be invaluable in the future.</span></span></p>
+          <p><code><span style="font-family: OpenDyslexicMono, Monaco, Menlo, Consolas, 'Courier New', monospace;">}</span></code></p>
+          <p>&nbsp;</p></div>
+          </div>
+          <div class='content-panel--blue'>
+            <div class='panel-title'>Attachments</div>
+            <div class='attachments-groups'>
+                <div class='file-list'>
+                  <div class='panel-label--dark'>Added files</div>
+                    <div class='file-item'>
+                      <div class='file-item__content'>
+                        <div class='file-item__icon'><svg style="width: 30px; height: 30px;" viewBox="0 0 1920 1920"><path fill="#2D3B45" fill-rule="evenodd" d="M1920 113v1694.118H0V113h1920Zm-112.941 112.941H112.94V1694.29h1694.12V225.941ZM935.944 1058.77c182.851-258.409 332.498-286.87 426.691-264.847 160.716 37.384 272.076 242.26 330.805 608.98l10.504 65.392H207.924l20.104-71.718c85.384-306.07 172.913-457.072 283.37-489.712 102.55-30.156 185.336 43.82 258.86 109.1 43.596 38.514 90.806 81.092 122.542 78.834 15.925-1.807 32.188-20.556 43.144-36.029Zm401.167-154.842c-83.012-19.313-196.066 60.762-308.895 220.01-35.237 49.807-76.348 77.816-122.315 83.124-76.226 9.024-138.182-42.827-198.812-96.266l-3.868-3.413c-2.578-2.276-5.154-4.552-7.73-6.824-54.211-48.113-110.682-97.017-152.018-85.384-34.447 10.165-102.325 69.12-185.788 340.179h1212.762c-50.485-265.186-134.4-428.386-233.336-451.426ZM677.647 338.882c124.574 0 225.882 101.309 225.882 225.883 0 124.574-101.308 225.882-225.882 225.882S451.765 689.34 451.765 564.765s101.308-225.883 225.882-225.883Zm0 112.942c-62.343 0-112.941 50.71-112.941 112.94 0 62.231 50.598 112.942 112.941 112.942 62.344 0 112.941-50.71 112.941-112.941 0-62.23-50.597-112.941-112.94-112.941Z" /></svg></div>
+                        <div class='file-item__info'>
+                          <span class='file-item__name'>Project Proposal - Evidence.png</span>
+                          <div class='card-header__content'>
+                            <div class='file-item__type'>Image</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='file-item'>
+                      <div class='file-item__content'>
+                        <div class='file-item__icon'><svg style="width: 30px; height: 30px;" viewBox="0 0 1920 1920"><path fill="#2D3B45" fill-rule="evenodd" d="M1251.654 0c44.499 0 88.207 18.07 119.718 49.581l329.223 329.224c31.963 31.962 49.581 74.54 49.581 119.717V1920H169V0Zm-66.183 112.941H281.94V1807.06h1355.294V564.706H1185.47V112.94Zm112.94 23.379v315.445h315.445L1298.412 136.32Z" /><path fill="#2D3B45" fill-rule="evenodd" d="M900.497 677.67c26.767 0 50.372 12.65 67.991 37.835 41.901 59.068 38.965 121.976 23.492 206.682-5.308 29.14.113 58.617 16.263 83.125 22.814 34.786 55.68 82.673 87.981 123.219 23.718 29.93 60.198 45.854 97.13 40.885 23.718-3.276 52.292-5.986 81.656-5.986 131.012 0 121.186 46.757 133.045 89.675 6.55 25.976 3.275 48.678-10.165 65.506-16.715 22.701-51.162 34.447-101.534 34.447-55.793 0-74.202-9.487-122.767-24.96-27.445-8.81-55.906-10.617-83.69-3.275-55.453 14.456-146.936 36.48-223.284 46.983-40.772 5.647-77.816 26.654-102.438 60.875-55.454 76.8-106.842 148.518-188.273 148.518-21.007 0-40.32-7.567-56.244-22.701-23.492-23.492-33.544-49.581-28.574-79.85 13.778-92.95 128.075-144.79 196.066-182.625 16.037-8.923 28.687-22.589 36.592-39.53l107.86-233.223c7.68-16.377 10.051-34.56 7.228-52.518-12.537-79.059-31.06-211.99 18.748-272.075 10.955-13.44 26.09-21.007 42.917-21.007Zm20.556 339.953c-43.257 126.607-119.718 264.282-129.996 280.32 92.273-43.37 275.916-65.28 275.916-65.28-92.386-88.998-145.92-215.04-145.92-215.04Z" /></svg></div>
+                        <div class='file-item__info'>
+                          <span class='file-item__name'>Project proposal - 20241490_20240970.pdf</span>
+                          <div class='card-header__content'>
+                            <div class='file-item__type'>PDF</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='file-item'>
+                      <div class='file-item__content'>
+                        <div class='file-item__icon'><svg style="width: 30px; height: 30px;" viewBox="0 0 1920 1920"><path fill="#2D3B45" fill-rule="evenodd" d="M1920 113v1694.118H0V113h1920Zm-112.941 112.941H112.94V1694.29h1694.12V225.941ZM935.944 1058.77c182.851-258.409 332.498-286.87 426.691-264.847 160.716 37.384 272.076 242.26 330.805 608.98l10.504 65.392H207.924l20.104-71.718c85.384-306.07 172.913-457.072 283.37-489.712 102.55-30.156 185.336 43.82 258.86 109.1 43.596 38.514 90.806 81.092 122.542 78.834 15.925-1.807 32.188-20.556 43.144-36.029Zm401.167-154.842c-83.012-19.313-196.066 60.762-308.895 220.01-35.237 49.807-76.348 77.816-122.315 83.124-76.226 9.024-138.182-42.827-198.812-96.266l-3.868-3.413c-2.578-2.276-5.154-4.552-7.73-6.824-54.211-48.113-110.682-97.017-152.018-85.384-34.447 10.165-102.325 69.12-185.788 340.179h1212.762c-50.485-265.186-134.4-428.386-233.336-451.426ZM677.647 338.882c124.574 0 225.882 101.309 225.882 225.883 0 124.574-101.308 225.882-225.882 225.882S451.765 689.34 451.765 564.765s101.308-225.883 225.882-225.883Zm0 112.942c-62.343 0-112.941 50.71-112.941 112.94 0 62.231 50.598 112.942 112.941 112.942 62.344 0 112.941-50.71 112.941-112.941 0-62.23-50.597-112.941-112.94-112.941Z" /></svg></div>
+                        <div class='file-item__info'>
+                          <span class='file-item__name'>Project Proposal - Evidence V2.png</span>
+                          <div class='card-header__content'>
+                            <div class='file-item__type'>Image</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>        <div class='links-container'>
+                  <div class='panel-label--dark'>Links</div>
+                    <div class='link-item'>
+                      <div class='link-item__icon'><svg viewBox="0 0 1920 1920"><path fill="#000" fill-rule="evenodd" d="M1866.003 351.563 1565.128 50.575c-69.46-67.652-180.932-67.426-248.923.565L906.23 461.116c-68.33 68.443-68.33 179.69.113 248.132l31.623 31.624 79.737-79.963-31.624-31.51c-24.282-24.396-24.282-64.038 0-88.433l409.977-409.977c24.508-24.395 64.828-24.17 89.675 0l299.859 299.972c24.734 25.186 24.847 65.619.564 90.014l-409.976 409.977c-24.508 24.282-64.15 24.282-88.546 0l-110.795-110.909 159.473-159.36-79.85-79.85-435.614 435.502-109.779-109.779c-32.866-33.656-76.8-52.292-123.67-52.63-43.596 1.694-92.273 18.296-126.156 52.178L51.377 1316.081c-68.442 68.442-68.442 179.69 0 248.132l301.553 301.553c34.108 34.108 79.059 51.275 124.01 51.275 44.95 0 89.9-17.167 124.122-51.275l409.976-409.977c33.77-33.882 52.405-78.607 52.066-126.042-.226-46.984-18.974-90.918-52.066-123.219l-30.494-30.494-79.85 79.85 30.946 30.945c11.86 11.633 18.41 27.106 18.523 43.595.113 16.942-6.664 33.092-18.974 45.516l-409.977 409.976c-23.492 23.492-64.94 23.492-88.433 0l-301.553-301.553c-11.746-11.746-18.183-27.444-18.183-44.273 0-16.715 6.437-32.414 18.183-44.16l409.977-409.976c12.197-12.31 28.235-19.087 45.063-19.087h.452c16.49.113 31.962 6.663 43.934 19.087l110.344 110.23-162.184 162.297 79.85 79.85 438.324-438.438 110.796 110.908c34.334 34.221 79.171 51.275 124.122 51.275 44.95 0 89.901-17.054 124.122-51.275l409.977-409.977c67.877-67.99 67.99-179.463 0-249.26" /></svg></div>
+                      <a href='https://docs.google.com/document/d/16ybU-78ok3LwfCHZ2fBRzoPJxBbX07j0wxf5up-zayM/edit?usp&#x3D;sharing' class='link-item__text' target='_blank' rel='noopener noreferrer'>Link to view the Document Created for this Assignment</a>
+                    </div>
+                    <div class='link-item'>
+                      <div class='link-item__icon'><svg viewBox="0 0 1920 1920"><path fill="#000" fill-rule="evenodd" d="M1866.003 351.563 1565.128 50.575c-69.46-67.652-180.932-67.426-248.923.565L906.23 461.116c-68.33 68.443-68.33 179.69.113 248.132l31.623 31.624 79.737-79.963-31.624-31.51c-24.282-24.396-24.282-64.038 0-88.433l409.977-409.977c24.508-24.395 64.828-24.17 89.675 0l299.859 299.972c24.734 25.186 24.847 65.619.564 90.014l-409.976 409.977c-24.508 24.282-64.15 24.282-88.546 0l-110.795-110.909 159.473-159.36-79.85-79.85-435.614 435.502-109.779-109.779c-32.866-33.656-76.8-52.292-123.67-52.63-43.596 1.694-92.273 18.296-126.156 52.178L51.377 1316.081c-68.442 68.442-68.442 179.69 0 248.132l301.553 301.553c34.108 34.108 79.059 51.275 124.01 51.275 44.95 0 89.9-17.167 124.122-51.275l409.976-409.977c33.77-33.882 52.405-78.607 52.066-126.042-.226-46.984-18.974-90.918-52.066-123.219l-30.494-30.494-79.85 79.85 30.946 30.945c11.86 11.633 18.41 27.106 18.523 43.595.113 16.942-6.664 33.092-18.974 45.516l-409.977 409.976c-23.492 23.492-64.94 23.492-88.433 0l-301.553-301.553c-11.746-11.746-18.183-27.444-18.183-44.273 0-16.715 6.437-32.414 18.183-44.16l409.977-409.976c12.197-12.31 28.235-19.087 45.063-19.087h.452c16.49.113 31.962 6.663 43.934 19.087l110.344 110.23-162.184 162.297 79.85 79.85 438.324-438.438 110.796 110.908c34.334 34.221 79.171 51.275 124.122 51.275 44.95 0 89.901-17.054 124.122-51.275l409.977-409.977c67.877-67.99 67.99-179.463 0-249.26" /></svg></div>
+                      <a href='https://www.ea.com/en-gb' class='link-item__text' target='_blank' rel='noopener noreferrer'>Electronic Arts Home Page - Official EA Site</a>
+                    </div>
+                </div>    </div>
+          </div>
+
+      </div>
+      <div class="content-tray">
+        <div class='card-info'>
+          <div class='card-header'>
+            <div class='card-header__content'>
+                  <div class='badge-text--violet'>Course assignment</div>
+            </div>
+          </div>
+            <div class='card-header'>
+              <div class='card-title--flex'>Project Proposal</div>
+            </div>
+            <div class='timestamp'>Date created: 05/20/2026</div>
+        </div>
+
+        <div class='content-panel--violet'>
+          <div class='panel-label'>Description</div>
+          <div class='text--panel'><div class="dp-wrapper" id="user-content-dp-wrapper">
+        <div class="dp-content-block p-0" style="background: radial-gradient(circle, var(--dt-color-accent) 40%, var(--dt-color-primary) 100%);">
+        <p style="margin-top: 0px; margin-bottom: 0px;"><img class="" role="presentation" src="https://learn.mywhitecliffe.com/courses/1508/files/295720/preview" alt="" width="1100" height="216.609" data-api-endpoint="https://learn.mywhitecliffe.com/api/v1/courses/1508/files/295720" data-api-returntype="File" loading="lazy"></p>
+        </div>
+        <div class="dp-content-block" style="padding: 70px 60px 20px;">
+        <h2 class="dp-font-poppins" style="font-size: 36pt;"><strong class="">Assessment 1: Project Proposal</strong></h2>
+        <dl class="dp-dl dp-original-dl">
+        <dt class="">Weighting:</dt>
+        <dd>Contributes to 30% of your final grade</dd>
+        <dt>Marks:</dt>
+        <dd>Out of 100</dd>
+        <dt class="">Assessed LOs</dt>
+        <dd>
+        <p>LO1: Identify project objectives and functional requirements for an IT-based solution to apply structured problem-solving techniques.</p>
+        <p>LO3: Demonstrate collaboration, communication and teamwork in an IT environment.&nbsp;</p>
+        </dd>
+        </dl>
+        </div>
+        <hr class="dp-hr-fade-one dp-hr-color-dp-secondary">
+        <div class="dp-content-block" style="padding: 20px 70px;">
+        <div class="dp-content-block">
+        <h3>Assessment overview:</h3>
+        <p>You are required to develop a project proposal for an IT solution addressing a real-world problem of your choosing. This proposal forms the foundation for the implementation work in Assessment 2.</p>
+        <p>In your submission, you must demonstrate the ability to identify problems using structured techniques, analyse key stakeholders, plan a technical solution, and communicate your ideas in a professional manner. You'll work in a group to develop this proposal, applying the problem-solving techniques and project planning concepts.</p>
+        <p>This assessment will evaluate your planning and analytical skills prior to commencing the development of your solution.</p>
+        <div class="dp-card card cp-bg-dp-gray">
+        <div class="card-body">
+        <h5 class="card-title dp-ignore-theme">Conditions</h5>
+        <ul>
+        <li>This is a group assessment (with groups to be approved by the instructor by Week 3). Solo work will only be permitted in exceptional circumstances with lecturer approval. If you don't have a partner, the lecturer will help you form a group.</li>
+        <li>All team members must contribute to the proposal - your submission must include a team collaboration statement.</li>
+        <li>All work submitted must be original and reflect your own analysis and planning.</li>
+        <li>Use of AI tools (e.g. ChatGPT, Copilot) for brainstorming or idea generation is permitted, provided this is declared on the cover page.</li>
+        <li>All diagrams, charts, and written content must be created by you.</li>
+        <li>If you learn from websites, tutorials, or videos, cite them in your references.</li>
+        <li>Late submissions after the due date or any approved extension will be managed in accordance with Whitecliffe's Academic Policy.</li>
+        <li>Submissions that do not follow the required structure, or format, may incur penalties of up to 10%.</li>
+        <li>Plagiarism or academic misconduct will be subject to Whitecliffe's Academic Policy and may result in disciplinary action, up to and including failure of the assignment or course.</li>
+        </ul>
+        </div>
+        </div>
+        </div>
+        <div class="dp-content-block">
+        <h3>Assessment requirements</h3>
+        <p>Please submit a complete project proposal document as a single PDF file via the Canvas system on the due date at the latest.</p>
+        <p>Your submission should be professionally formatted, with clear section headings, appropriate use of diagrams and tables, and proper citation of any referenced materials. The body of your proposal should be between 1200 and 1500 ± 10% words, excluding the cover page, table of contents, diagrams, and references, and team collaboration statement.</p>
+        <p>Your work should demonstrate academic integrity. Use APA 7th edition referencing to acknowledge all external sources in your report, in line with the guidelines below.&nbsp;&nbsp;</p>
+        </div>
+        <div class="dp-content-block">
+        <h3>Submission instructions</h3>
+        <ol>
+        <li>Save your document as: StudentID1_StudentID2_ProjectProposal.pdf (e.g., for a paired work, the filename could be 12345678_23456789_ProjectProposal.pdf).</li>
+        <li>Upload your file via the "Assessment 1 Submission" portal in the Canvas system.</li>
+        <li>Ensure the file is under 10MB.</li>
+        <li>Only PDF format is accepted; Word documents, Google Docs links, or other formats will not be marked.</li>
+        </ol>
+        </div>
+        <div class="dp-content-block">
+        <h3>Submission checklist</h3>
+        <p>Before submitting, ensure your proposal includes all required components:</p>
+        <p><strong>Cover Page:</strong></p>
+        <ul class="dp-inputs dp-checkbox-input-list" style="list-style-type: none; margin-left: 0px; margin-bottom: 0px; padding: 8px;">
+        <li>Project title (clear and descriptive)</li>
+        <li>Student name(s) and ID(s)</li>
+        <li>Supervisor name (course lecturer)</li>
+        <li>Course code and name</li>
+        <li>Submission date</li>
+        <li>Declaration of AI tool use (if applicable): "We used [tool name] to [what you used it for]" OR "We did not use AI tools for this assessment"</li>
+        </ul>
+        <p class=""><strong>Table of Contents:</strong></p>
+        <ul class="dp-inputs dp-checkbox-input-list" style="list-style-type: none; margin-left: 0px; margin-bottom: 0px; padding: 8px;">
+        <li>List all sections with page numbers</li>
+        </ul>
+        <p class=""><strong>Part 1: Abstract</strong></p>
+        <ul class="dp-inputs dp-checkbox-input-list" style="list-style-type: none; margin-left: 0px; margin-bottom: 0px; padding: 8px;">
+        <li>Overview of the problem</li>
+        <li>Brief mention of existing solutions</li>
+        <li>Summary of your proposed solution</li>
+        <li>Expected outcomes/benefits</li>
+        </ul>
+        <p class=""><strong>Part 2: Introduction</strong></p>
+        <ul class="dp-inputs dp-checkbox-input-list" style="list-style-type: none; margin-left: 0px; margin-bottom: 0px; padding: 8px;">
+        <li>Detailed explanation of the problem:&nbsp;What is the problem?&nbsp;Why does it matter?&nbsp;Who experiences this problem?</li>
+        <li>Analysis of 1-2 existing solutions or similar products:&nbsp;What do they do?&nbsp;What features do they have?&nbsp;What do you like about them?&nbsp;What could be better?</li>
+        <li>SMART aims and objectives for your project</li>
+        </ul>
+        <p class=""><strong>Part 3: Proposed Solution</strong></p>
+        <ul class="dp-inputs dp-checkbox-input-list" style="list-style-type: none; margin-left: 0px; margin-bottom: 0px; padding: 8px;">
+        <li>Clear description of your solution: What will your program/app do? Who will use it? How will people use it (describe the main actions users will take)? Main features you plan to include.</li>
+        <li>What you will NOT include (set boundaries)</li>
+        <li>Visualisations showing the main parts of your solution:&nbsp;Example: flow chart or block diagram showing how the program works, or sketch of what screens/menus users will see</li>
+        <li>Technology choices with explanation:&nbsp;What will you use?</li>
+        <li>Why these choices?</li>
+        </ul>
+        <p class=""><strong>Part 4: Stakeholder Analysis</strong></p>
+        <ul class="dp-inputs dp-checkbox-input-list" style="list-style-type: none; margin-left: 0px; margin-bottom: 0px; padding: 8px;">
+        <li>Identification of relevant stakeholders</li>
+        <li>Roles and interests</li>
+        <li>Power/Interest grid (or similar analysis tool)</li>
+        <li>How stakeholder needs will be addressed&nbsp;</li>
+        </ul>
+        <p class=""><strong>Part 5: Project Plan</strong></p>
+        <ul class="dp-inputs dp-checkbox-input-list" style="list-style-type: none; margin-left: 0px; margin-bottom: 0px; padding: 8px;">
+        <li>Project timeline with milestones (using Gantt chart or tables)</li>
+        <li>Resource requirements (software, tools, hardware)</li>
+        <li>Risk assessment (at least three risks and mitigation strategies)</li>
+        <li>Team roles and responsibilities:&nbsp;Member A responsibilities. Member B responsibilities. What you'll do together.</li>
+        </ul>
+        <p class=""><strong>Part 6: References</strong></p>
+        <ul class="dp-inputs dp-checkbox-input-list" style="list-style-type: none; margin-left: 0px; margin-bottom: 0px; padding: 8px;">
+        <li>Minimum of five academic or professional sources</li>
+        <li>Correct APA 7th edition formatting</li>
+        </ul>
+        <p class=""><strong>Part 7: Team Collaboration Statement</strong></p>
+        <ul class="dp-inputs dp-checkbox-input-list" style="list-style-type: none; margin-left: 0px; margin-bottom: 0px; padding: 8px;">
+        <li>How did you divide the work for this proposal?&nbsp;Who wrote which sections?&nbsp;What did you do together?</li>
+        <li>How did you communicate and meet?</li>
+        <li>How many times did you meet/video call?</li>
+        <li>Did you use shared documents?</li>
+        <li>Is the work split fairly?</li>
+        <li>Both team members must sign: "We confirm this statement is accurate and we both contributed to this proposal."</li>
+        </ul>
+        <p class=""><strong>Appendices (if applicable)</strong></p>
+        <ul class="dp-inputs dp-checkbox-input-list" style="list-style-type: none; margin-left: 0px; margin-bottom: 0px; padding: 8px;">
+        <li>Further diagrams, charts, or supporting materials</li>
+        <li>Evidence of initial research (optional)</li>
+        </ul>
+        <p>Total main content: <strong>1200-1500 ± 10%</strong> words.</p>
+        </div>
+        <div class="dp-policy-wrapper dp-locked policy-2" data-api-url="courses/1508/pages/policies-referencing">
+        <div class="dp-content-block dp-margin-direction-all dp-padding-direction-all dp-shadow-b1" style="margin: 20px; border-radius: 2px; padding: 25px;" data-title="Subtle Emphasis" data-category="Callout">
+        <h3 class="dp-has-icon dp-font-poppins cp-txt-dp-primary">
+        <i class="dp-icon fas fa-align-left cp-txt-dp-secondary"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Referencing</h3>
+        <p>​​​Referencing is used to give credit to ideas presented in your work that are not your own. This means that you can quote or paraphrase from your research as long as you acknowledge where those words and ideas came from. If you do not correctly reference your work, you might have it rejected for plagiarism.</p>
+        <p>Depending on your school, you might be asked to reference in APA or Chicago style.</p>
+        <p>For guidance on referencing, refer to the following Whitecliffe referencing guide below:</p>
+        <p><a class="btn cph-bg-dp-secondary btn-outline-dp-primary btn-block" href="https://library.mywhitecliffe.com/referencing-plagiarism/" target="_blank" rel="noopener noreferrer"><i class="fas fa-align-left"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Whitecliffe Referencing guide</a></p>
+        </div>
+        </div>
+        </div>
+        <hr class="dp-hr-fade-two dp-hr-color-dp-secondary">
+        <div class="dp-policy-wrapper dp-locked policy-2" data-api-url="courses/1508/pages/policies-submission-declaration">
+        <div class="dp-content-block dp-margin-direction-all dp-padding-direction-all dp-shadow-b1" style="margin: 20px; border-radius: 2px; padding: 25px;" data-title="Subtle Emphasis" data-category="Callout">
+        <h3 class="dp-has-icon dp-font-poppins cp-txt-dp-primary">
+        <i class="fas fa-signature cp-txt-dp-secondary"><span class="dp-icon-content" style="display: none;">&nbsp;</span></i> Submission declaration</h3>
+        <p>By submitting your work, you confirm that you agree to the following declaration:</p>
+        <div class="dp-callout dp-callout-placeholder card dp-callout-position-default w-100 rounded-3 dp-border-dir-all dp-border-style-solid cp-out-dp-primary dp-shadow-b1 dp-callout-color-dp-secondary dp-callout-type-default dp-callout-pos-c" style="border-width: 1px;">
+        <div class="card-body">
+        <p class="card-text dp-margin-direction-tblr" style="margin-left: 9px; text-align: center;"><em>"The work presented in this assessment is to the best of my knowledge original, except as acknowledged in the text, and the material has not already been submitted, either in whole or in part, for any academic award at this or any other tertiary institution. I promise not to share this assessment in part or whole with any other student at Whitecliffe or outside this campus." </em></p>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div></div>
+        </div>
+
+
+      </div>
+    <div class="heading--module">Evidence without a section</div>
+    </main>
+  </body>
+</html>
